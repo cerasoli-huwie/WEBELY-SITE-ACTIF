@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dossier Contractuel & Bon de Commande — Webely Acquisition System</title>
+  
+  <!-- Polices Officielles Webely : Syne & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2309090d'/><text x='14' y='68' font-family='sans-serif' font-size='60' font-weight='900' fill='%23ffffff'>w</text><circle cx='76' cy='36' r='12' fill='%238b5cf6'/></svg>">
+
+  <style>
+    /* ==========================================================================
+       DOSSIER CONTRACTUEL WEBEL Y — ÉDITION JURIDIQUE CORPORATE HAUT DE GAMME
+       Droit Belge (Code de droit économique) & RGPD (Article 28 / APD Belgique)
+       Palette Signature : Tech Mauve Électrique (#7c3aed / #8b5cf6) & Slate Noir
+       ========================================================================== */
+
+    :root {
+      --tech-mauve: #7c3aed;          /* Mauve Tech Principal */
+      --tech-mauve-vibrant: #8b5cf6;  /* Mauve Électrique */
+      --tech-mauve-light: #a78bfa;    /* Lavande Accent */
+      --tech-mauve-subtle: #f5f3ff;   /* Fond Mauve Très Pâle */
+      --tech-mauve-border: #ddd6fe;   /* Filet Mauve Discret */
+
+      --ink-black: #09090b;           /* Noir Typographique Profond */
+      --ink-primary: #18181b;         /* Texte de Lecture */
+      --ink-secondary: #3f3f46;       /* Sous-titres & Détails */
+      --ink-muted: #71717a;           /* Métadonnées & Folios */
+      --rule-line: #e4e4e7;           /* Filets de Séparation */
+
+      --bg-desk: #09090d;             /* Bureau Sombre Hors Impression */
+      --bg-paper: #ffffff;            /* Papier A4 Pur */
+
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-brand: 'Syne', -apple-system, sans-serif;
+      --font-legal: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-desk);
+      color: var(--ink-primary);
+      font-family: var(--font-body);
+      font-size: 13px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* BARRE D'ACTIONS FLOTTANTE SUPÉRIEURE */
+    .screen-action-bar {
+      position: sticky;
+      top: 0;
+      background: rgba(13, 13, 18, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 12px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      color: #ffffff;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.45);
+    }
+
+    .bar-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-status-tech {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: rgba(139, 92, 246, 0.14);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      color: var(--tech-mauve-light);
+    }
+
+    .badge-status-tech::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--tech-mauve-vibrant);
+      box-shadow: 0 0 8px var(--tech-mauve-vibrant);
+    }
+
+    .btn-print-dossier {
+      background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 9px 22px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
+      transition: all 0.2s;
+    }
+
+    .btn-print-dossier:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 22px rgba(124, 58, 237, 0.6);
+    }
+
+    .btn-site-link {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 9px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-site-link:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    /* CONTENEUR DU DOSSIER PAPIER A4 */
+    .contract-document-wrapper {
+      max-width: 880px;
+      margin: 36px auto 80px;
+      background: var(--bg-paper);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08);
+      border-radius: 2px;
+    }
+
+    .a4-page-sheet {
+      padding: 56px 64px 50px;
+      position: relative;
+      background: #ffffff;
+      min-height: 1120px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .a4-separator {
+      border-top: 1px solid #d4d4d8;
+      position: relative;
+      margin: 0;
+      page-break-before: always;
+      break-before: page;
+    }
+
+    .a4-separator::before {
+      content: "— SÉPARATION DE PAGE A4 (IMPRESSION) —";
+      display: block;
+      background: var(--bg-desk);
+      color: #71717a;
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-align: center;
+      padding: 8px 0;
+    }
+
+    /* RUNNING HEADERS & FOOTERS FORMELS */
+    .contract-folio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.5px solid var(--rule-line);
+      padding-bottom: 12px;
+      margin-bottom: 26px;
+      font-size: 10.5px;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .contract-folio-header strong {
+      color: var(--ink-black);
+    }
+
+    .contract-folio-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--rule-line);
+      padding-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: var(--ink-muted);
+    }
+
+    .paraphe-cluster {
+      display: flex;
+      gap: 24px;
+    }
+
+    .paraphe-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .paraphe-line {
+      display: inline-block;
+      width: 45px;
+      border-bottom: 1px solid var(--ink-secondary);
+    }
+
+    /* LOGO OFFICIEL WEBEL Y EN TYPOGRAPHIE SYNE VECTORIELLE */
+    .brand-contract-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 22px;
+    }
+
+    .logo-webely-editorial {
+      font-family: var(--font-brand);
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      color: var(--ink-black);
+      display: inline-flex;
+      align-items: baseline;
+      user-select: none;
+    }
+
+    .logo-webely-editorial .brand-name {
+      background: linear-gradient(135deg, #09090b 20%, #27272a 60%, #52525b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .logo-webely-editorial .dot-rect {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      background: var(--tech-mauve);
+      margin-left: 2px;
+      vertical-align: baseline;
+      box-shadow: 0 0 10px rgba(124, 58, 237, 0.45);
+      border-radius: 1px;
+    }
+
+    .logo-sub-tagline {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--ink-muted);
+      margin-top: 4px;
+    }
+
+    .meta-contract-block {
+      text-align: right;
+      font-size: 11px;
+      color: var(--ink-muted);
+    }
+
+    .meta-tag-be {
+      display: inline-block;
+      background: #09090b;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      margin-top: 5px;
+    }
+
+    .meta-tag-be span {
+      color: var(--tech-mauve-vibrant);
+    }
+
+    /* TITRES & HIÉRARCHIE DU CONTRAT */
+    h1.contract-main-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--ink-black);
+      letter-spacing: -0.3px;
+      line-height: 1.3;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    h2.contract-sub-title {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--ink-secondary);
+      margin-bottom: 22px;
+    }
+
+    /* CARTOUCHE DES PARTIES B2B (OFFICIEL & ÉLÉGANT) */
+    .parties-grid-official {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .party-box-unit {
+      border: 1px solid var(--rule-line);
+      border-radius: 6px;
+      padding: 14px 18px;
+      background: #fafafc;
+      font-size: 11.5px;
+      line-height: 1.5;
+    }
+
+    .party-box-unit.prestataire {
+      border-top: 3px solid var(--tech-mauve);
+    }
+
+    .party-box-unit.client {
+      border-top: 3px solid #27272a;
+    }
+
+    .party-role-tag {
+      font-size: 9.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--tech-mauve);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .party-box-unit.client .party-role-tag {
+      color: #52525b;
+    }
+
+    .party-entity-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--ink-black);
+      margin-bottom: 4px;
+    }
+
+    /* SYNTHÈSE EXÉCUTIVE DES 4 PILIERS DU SYSTÈME */
+    .section-legal-heading {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--ink-black);
+      border-bottom: 1.5px solid var(--ink-black);
+      padding-bottom: 4px;
+      margin-top: 18px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .tag-section-num {
+      background: var(--tech-mauve);
+      color: #ffffff;
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    .pillars-overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .pillar-overview-card {
+      background: #ffffff;
+      border: 1px solid var(--rule-line);
+      border-radius: 5px;
+      padding: 12px 10px;
+      font-size: 11px;
+    }
+
+    .poc-num {
+      font-size: 9.5px;
+      font-weight: 800;
+      color: var(--tech-mauve);
+      margin-bottom: 2px;
+    }
+
+    .poc-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--ink-black);
+      margin-bottom: 4px;
+    }
+
+    .poc-desc {
+      font-size: 10px;
+      color: var(--ink-muted);
+      line-height: 1.35;
+    }
+
+    /* TABLEAU FINANCIER ÉPURÉ SUISSE */
+    table.table-financial-deal {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+      font-size: 11px;
+    }
+
+    table.table-financial-deal th {
+      background: #09090b;
+      color: #ffffff;
+      font-size: 9.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    table.table-financial-deal td {
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--rule-line);
+      vertical-align: top;
+      background: #ffffff;
+    }
+
+    .total-financial-banner {
+      background: #fafafc;
+      border: 1px solid var(--rule-line);
+      border-radius: 6px;
+      padding: 10px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .total-figure-highlight {
+      font-size: 17px;
+      font-weight: 900;
+      color: var(--ink-black);
+    }
+
+    .total-figure-highlight span {
+      color: var(--tech-mauve);
+    }
+
+    /* ENCADRÉ BUDGET META (DISJONCTION FORMELLE) */
+    .callout-disjonction-meta {
+      border: 1px solid var(--tech-mauve-border);
+      border-left: 3.5px solid var(--tech-mauve);
+      background: var(--tech-mauve-subtle);
+      border-radius: 0 5px 5px 0;
+      padding: 8px 12px;
+      font-size: 10.5px;
+      line-height: 1.45;
+      margin-bottom: 10px;
+    }
+
+    .callout-disjonction-meta strong {
+      color: var(--tech-mauve);
+    }
+
+    /* BANNIÈRE DE RATIFICATION MAÎTRESSE (PAGE 1 - SIGNATURE UNIQUE) */
+    .ratification-master-banner {
+      border: 1px solid var(--tech-mauve-border);
+      border-left: 3.5px solid var(--tech-mauve);
+      background: #faf8ff;
+      border-radius: 0 5px 5px 0;
+      padding: 9px 12px;
+      font-size: 9.5px;
+      line-height: 1.42;
+      color: var(--ink-secondary);
+      margin-top: 8px;
+      margin-bottom: 10px;
+    }
+
+    .ratification-master-banner strong {
+      color: var(--ink-black);
+    }
+
+    /* BANNIÈRES DE RATIFICATION INTER-SECTIONS (PAGES 4, 5, 6) */
+    .contract-ratification-banner {
+      border: 1px solid var(--rule-line);
+      border-left: 3.5px solid var(--tech-mauve);
+      background: #fafafc;
+      border-radius: 0 5px 5px 0;
+      padding: 14px 18px;
+      margin-top: 22px;
+      font-size: 11px;
+      line-height: 1.55;
+    }
+
+    .contract-ratification-banner .crb-title {
+      font-size: 10.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--ink-black);
+      margin-bottom: 4px;
+    }
+
+    .contract-ratification-banner .crb-text {
+      color: var(--ink-secondary);
+      margin: 0;
+    }
+
+    .contract-final-certification {
+      margin-top: 24px;
+      padding: 16px 20px;
+      border: 1px solid var(--rule-line);
+      background: #fafafc;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 10.5px;
+      color: var(--ink-secondary);
+      line-height: 1.55;
+    }
+
+    .contract-final-certification .cfc-title {
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--ink-black);
+      margin-bottom: 4px;
+      font-size: 11px;
+    }
+
+    /* BLOCS DE SIGNATURE FORMELS */
+    .signatures-dual-deck {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 10px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .sig-deck-panel {
+      border: 1px solid var(--rule-line);
+      border-radius: 6px;
+      padding: 10px 14px;
+      background: #ffffff;
+      font-size: 10.5px;
+    }
+
+    .sig-deck-title {
+      font-size: 9.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--ink-black);
+      border-bottom: 1px solid var(--rule-line);
+      padding-bottom: 3px;
+      margin-bottom: 6px;
+    }
+
+    .sig-legal-quote {
+      font-size: 9px;
+      font-style: italic;
+      color: var(--ink-muted);
+      margin: 4px 0;
+    }
+
+    .sig-stamp-box {
+      height: 60px;
+      border: 1px dashed #cbd5e1;
+      border-radius: 4px;
+      background: #fafafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      font-size: 9.5px;
+      font-style: italic;
+      margin-top: 6px;
+    }
+
+    /* STRUCTURE DU CONTRAT EN VRAIS ARTICLES LÉGAUX NUMÉROTÉS */
+    .legal-articles-stream {
+      font-size: 11.5px;
+      line-height: 1.55;
+      text-align: justify;
+    }
+
+    .article-row {
+      margin-bottom: 14px;
+    }
+
+    .article-header-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--ink-black);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .article-header-title span.art-num {
+      color: var(--tech-mauve);
+      font-weight: 800;
+    }
+
+    .article-p {
+      margin-bottom: 6px;
+    }
+
+    .bullet-legal-list {
+      margin-left: 18px;
+      margin-bottom: 8px;
+    }
+
+    .bullet-legal-list li {
+      margin-bottom: 3px;
+    }
+
+    /* TIMELINE 14 JOURS FORMAT COMPACT */
+    .timeline-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .timeline-strip-node {
+      border: 1px solid var(--rule-line);
+      border-top: 2.5px solid var(--tech-mauve);
+      border-radius: 4px;
+      padding: 10px 12px;
+      background: #fafafc;
+      font-size: 10.5px;
+    }
+
+    .tsn-days {
+      font-weight: 800;
+      color: var(--tech-mauve);
+      font-size: 9.5px;
+      margin-bottom: 2px;
+    }
+
+    .tsn-title {
+      font-weight: 700;
+      color: var(--ink-black);
+      margin-bottom: 3px;
+    }
+
+    /* IMPRESSION STRICTE FORMAT A4 */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 10pt !important;
+      }
+      .screen-action-bar {
+        display: none !important;
+      }
+      .contract-document-wrapper {
+        margin: 0 !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+      .a4-page-sheet {
+        padding: 0 !important;
+        min-height: auto !important;
+      }
+      .a4-separator {
+        page-break-before: always !important;
+        break-before: page !important;
+        border-top: none !important;
+      }
+      .a4-separator::before {
+        display: none !important;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 16mm 14mm 16mm 14mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRE SUPÉRIEURE D'ACTION ÉCRAN (Invisible à l'impression) -->
+  <aside aria-label="Contrôles du dossier juridique" class="screen-action-bar">
+    <div class="bar-info">
+      <span class="badge-status-tech">Dossier Juridique Officiel</span>
+      <span style="font-size: 13.5px; font-weight: 600;">Webely Acquisition System — Convention B2B & Bon de Commande</span>
+    </div>
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <a href="CONTRAT_WEBELY_DOSSIER_COMPLET.docx" download="CONTRAT_WEBELY_DOSSIER_COMPLET.docx" class="btn-site-link" style="display: inline-flex; align-items: center; gap: 7px; border-color: rgba(167, 139, 250, 0.45); background: rgba(139, 92, 246, 0.14); color: #ddd6fe;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>Télécharger en Word (.docx éditable)</span>
+      </a>
+      <button class="btn-print-dossier" onclick="window.print()" title="Exporter en PDF officiel A4">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+        <span>Imprimer / Exporter en PDF (A4)</span>
+      </button>
+      
+    </div>
+  </aside>
+
+  <!-- CONTENEUR DU DOSSIER OFFICIEL -->
+  <main class="contract-document-wrapper">
+
+    <!-- ==========================================================================
+         PAGE 1 : BON DE COMMANDE EXÉCUTIF & PROPOSITION COMMERCIALE
+         Mise en page d'élite, logo Syne officiel avec point mauve tech
+         ========================================================================== -->
+    <section class="a4-page-sheet">
+      <header class="contract-folio-header">
+        <div>Référence du Dossier : <strong>WBL-CONT-2026-001</strong></div>
+        <div>Document : <strong>Bon de Commande & Synthèse de l'Accord</strong></div>
+      </header>
+
+      <!-- EN-TÊTE CORPORATE AVEC VRAI LOGO SYNE ET COORDONNÉES EXACTES -->
+      <div class="brand-contract-header">
+        <div>
+          <div class="logo-webely-editorial"><span class="brand-name">webely</span><span class="dot-rect"></span></div>
+          <div class="logo-sub-tagline">Systèmes d'Acquisition Client B2B • Métiers Techniques & Bâtiment</div>
+        </div>
+        <div class="meta-contract-block">
+          <div>Date d'émission : <strong>08 novembre 2026</strong></div>
+          <div>Validité de l'offre : <strong>30 jours calendaires</strong></div>
+          <div class="meta-tag-be">Droit Belge <span>•</span> SPF Économie <span>•</span> RGPD</div>
+        </div>
+      </div>
+
+      <h1 class="contract-main-title">Bon de Commande & Convention d'Acquisition</h1>
+      <h2 class="contract-sub-title">Déploiement et Pilotage du Système « Webely Acquisition System » dans votre zone de 30 km</h2>
+
+      <!-- CARTOUCHE D'IDENTIFICATION COMPLÈTE DES PARTIES (DROIT BELGE) -->
+      <div class="parties-grid-official">
+        <div class="party-box-unit prestataire">
+          <span class="party-role-tag">1. Le Prestataire</span>
+          <div class="party-entity-title">WEBELY</div>
+          <div>Exploité en nom personnel par : <strong>Huw Cerasoli</strong></div>
+          <div style="font-size: 10.5px; color: var(--ink-muted); margin-bottom: 2px;">Statut : <strong>Entreprise individuelle (Personne physique)</strong></div>
+          <div>Numéro d'entreprise / BCE : <strong>1041.761.489</strong></div>
+          <div>Numéro de TVA : <strong>BE 1041.761.489</strong></div>
+          <div style="font-size: 10.5px; color: var(--tech-mauve); font-weight: 700; margin-top: 2px;">
+            Régime particulier de franchise de taxe pour les petites entreprises — TVA non applicable (Art. 56bis Code TVA belge)
+          </div>
+          <div>Siège d'exploitation : Bruxelles, Belgique</div>
+          <div>Contact direct : <strong>huwie@webely.eu</strong> • Tél : <strong>+32 468 31 48 60</strong></div>
+          <div>Site officiel : <strong>webely.eu</strong></div>
+        </div>
+
+        <div class="party-box-unit client">
+          <span class="party-role-tag">2. L'Entreprise Partenaire (Le Client)</span>
+          <div class="party-entity-title">[Dénomination Sociale du Client]</div>
+          <div>Représentée légalement par : <strong>________________________________</strong></div>
+          <div>Qualité du signataire : <strong>Administrateur / Gérant / Titulaire</strong></div>
+          <div>Numéro BCE / TVA : <strong>BE [Numéro BCE / TVA Client]</strong></div>
+          <div>Siège d'exploitation / social : [Adresse complète du siège, Belgique]</div>
+          <div>Contact opérationnel : [Email du dirigeant] • GSM : [GSM d'alerte leads]</div>
+          <div>Secteur d'activité : [Rénovation / Pompe à Chaleur / Toiture / Électricité]</div>
+        </div>
+      </div>
+
+      <!-- SYNTHÈSE DES 4 COMPOSANTES DU SYSTÈME COMMANDÉ -->
+      <div class="section-legal-heading">
+        <span>Description & Consistance des Prestations d'Installation (Set-up)</span>
+        <span class="tag-section-num">Système Complet</span>
+      </div>
+
+      <div class="pillars-overview-grid">
+        <div class="pillar-overview-card">
+          <div class="poc-num">01 — CONVERSION</div>
+          <div class="poc-title">Landing Page Dédiée</div>
+          <div class="poc-desc">Page unique mobile haute vitesse, rédaction persuasive de vos agréments, assurances décennales et réalisations.</div>
+        </div>
+
+        <div class="pillar-overview-card">
+          <div class="poc-num">02 — CAPTURE</div>
+          <div class="poc-title">Formulaire Qualifiant</div>
+          <div class="poc-desc">Filtrage sélectif : zone de 30 km, code postal, typologie de bâtiment, nature précise des travaux, délai et budget.</div>
+        </div>
+
+        <div class="pillar-overview-card">
+          <div class="poc-num">03 — GESTION</div>
+          <div class="poc-title">CRM & Notifications</div>
+          <div class="poc-desc">Pipeline de suivi commercial, notification instantanée SMS/email sur votre smartphone et confirmation au prospect.</div>
+        </div>
+
+        <div class="pillar-overview-card">
+          <div class="poc-num">04 — ACQUISITION</div>
+          <div class="poc-title">Campagnes Meta Ads</div>
+          <div class="poc-desc">Pilotage publicitaire géociblé Facebook/Instagram avec conception continue de 3 à 5 variations créatives simples par mois.</div>
+        </div>
+      </div>
+
+      <!-- TABLEAU FINANCIER D'ENGAGEMENT -->
+      <table class="table-financial-deal">
+        <thead>
+          <tr>
+            <th style="width: 14%;">Poste</th>
+            <th style="width: 56%;">Détail des Prestations Fournies par Webely</th>
+            <th style="width: 12%; text-align: center;">Périodicité</th>
+            <th style="width: 18%; text-align: right;">Montant Net</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>INSTALLATION</strong></td>
+            <td>
+              <strong>Installation Complète du Webely Acquisition System (Set-up)</strong><br>
+              <span style="color: var(--ink-muted); font-size: 10px;">
+                Conception sur-mesure de la landing page, formulaire qualifiant, configuration CRM & pipeline, tracking Pixel/CAPI conforme RGPD, formation commerciale (45 min).
+              </span>
+            </td>
+            <td style="text-align: center;">Forfait unique</td>
+            <td style="text-align: right;"><strong>1 990,00 €</strong></td>
+          </tr>
+          <tr>
+            <td><strong>GESTION</strong></td>
+            <td>
+              <strong>Pilotage Mensuel des Campagnes, Hébergement & Support (Mois 1)</strong><br>
+              <span style="color: var(--ink-muted); font-size: 10px;">
+                Optimisation continue Meta Ads, 3-5 créations/mois, hébergement sécurisé SSL, surveillance des formulaires et rapport mensuel ROI.
+              </span>
+            </td>
+            <td style="text-align: center;">1er mois</td>
+            <td style="text-align: right;"><strong>490,00 €</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- RÉCAPITULATIF FINANCIER GLOBAL -->
+      <div class="total-financial-banner">
+        <div>
+          <div style="font-size: 9.5px; font-weight: 800; text-transform: uppercase; color: var(--ink-muted);">Total des Prestations Webely (Premier Mois Set-up + Gestion) :</div>
+          <div style="font-size: 10.5px; color: #059669; font-weight: 700; margin-top: 1px;">Régime de franchise de taxe (Art. 56bis Code TVA) — TVA non applicable (0,00 €)</div>
+        </div>
+        <div style="text-align: right;">
+          <div class="total-figure-highlight">2 480,00 € <span>Net</span></div>
+          <div style="font-size: 10.5px; font-weight: 700; color: var(--ink-black);">(Total exigible pour le lancement • Zéro supplément de TVA)</div>
+        </div>
+      </div>
+
+      <!-- DISJONCTION CLAIRE ET RASSURANTE DU BUDGET PUBLICITAIRE META -->
+      <div class="callout-disjonction-meta">
+        <strong>DISJONCTION BUDGÉTAIRE DU BUDGET PUBLICITAIRE META ADS (PAYÉ DIRECTEMENT À META) :</strong><br>
+        Le budget publicitaire d'achat d'espace (conseillé de <strong>600 à 1 000 € / mois</strong>) est prélevé <strong>directement par Meta Platforms Ireland Ltd sur la carte bancaire de l'entreprise cliente</strong>. Webely n'encaisse aucune commission masquée sur votre budget d'annonces. Le Client conserve la pleine propriété de son compte publicitaire et de son audience.<br>
+        <em>Dès le deuxième mois, l'investissement récurrent s'élève à 490,00 € Net / mois (Webely) + budget média Meta selon votre choix.</em>
+      </div>
+
+      <!-- CLAUSE DE RATIFICATION GLOBALE & BLOC DE SIGNATURE UNIQUE -->
+      <div class="ratification-master-banner">
+        <strong>CLAUSE D'INDIVISIBILITÉ & ACCEPTATION GLOBALE DU DOSSIER CONTRACTUEL :</strong><br>
+        En apposant leur signature ci-dessous, les Parties confirment leur accord exprès, plein et entier sur les stipulations du présent <strong>Bon de Commande</strong>, ainsi que sur l'ensemble des pièces indissociables composant le présent dossier : le <strong>Rétroplanning d'Exécution & Matrice de Périmètre (Page 2)</strong>, les <strong>Conditions Générales de Prestation de Services (Articles 1 à 12, Pages 3 et 4)</strong>, l'<strong>Accord de Sous-traitance RGPD (DPA Article 28, Page 5)</strong> et le <strong>Mandat d'Administration Publicitaire Meta Ads (Page 6)</strong>. La signature unique apposée ci-après, complétée des paraphes apposés au bas de chaque feuillet, confère pleine valeur probante et force obligatoire à l'intégralité du dossier contractuel conformément aux articles 8.20 du Code civil et XII.15 du Code de droit économique belge.
+      </div>
+
+      <div class="signatures-dual-deck">
+        <div class="sig-deck-panel">
+          <div class="sig-deck-title">Pour le Prestataire : WEBEL Y</div>
+          <div>Signataire : <strong>Huw Cerasoli</strong>, en nom personnel</div>
+          <div>Qualité : <strong>Prestataire (Entreprise individuelle)</strong></div>
+          <div>Fait à Bruxelles, le _____ / _____ / 2026</div>
+          <div class="sig-legal-quote">Mention : « Bon pour accord et acceptation »</div>
+          <div class="sig-stamp-box">Cachet & Signature Webely</div>
+        </div>
+
+        <div class="sig-deck-panel" style="border-color: #a1a1aa;">
+          <div class="sig-deck-title" style="color: var(--tech-mauve);">Pour le Client : Bon pour Accord & Commande Ferme</div>
+          <div>Signataire : <strong>________________________________</strong></div>
+          <div>Qualité : <strong>Administrateur / Gérant / Titulaire dûment habilité</strong></div>
+          <div>Fait à : ____________________, le _____ / _____ / 2026</div>
+          <div class="sig-legal-quote">Mention : « Bon pour commande, accord et acceptation sans réserve de l'ensemble des clauses et annexes »</div>
+          <div class="sig-stamp-box">Signature & Cachet de l'Entreprise Cliente</div>
+        </div>
+      </div>
+
+      <footer class="contract-folio-footer">
+        <div>Dossier Webely Réf. WBL-CONT-2026-001 — Page 1 sur 6</div>
+        <div class="paraphe-cluster">
+          <div class="paraphe-item">Initiales Webely : <span class="paraphe-line"></span></div>
+          <div class="paraphe-item">Initiales Client : <span class="paraphe-line"></span></div>
+        </div>
+      </footer>
+    </section>
+
+
+    <!-- ==========================================================================
+         PAGE 2 : PLAN DE DÉPLOIEMENT EN 14 JOURS & MATRICE DE PÉRIMÈTRE
+         Mise en page rigoureuse et rassurante
+         ========================================================================== -->
+    <div class="a4-separator"></div>
+    <section class="a4-page-sheet">
+      <header class="contract-folio-header">
+        <div>Dossier Webely Réf. : <strong>WBL-CONT-2026-001</strong></div>
+        <div>Annexe Opérationnelle : Rétroplanning & Matrice de Périmètre</div>
+      </header>
+
+      <div class="section-legal-heading">
+        <span>Rétroplanning d'Exécution : Déploiement en 14 Jours Ouvrés</span>
+        <span class="tag-section-num">Calendrier Ferme</span>
+      </div>
+
+      <div class="timeline-strip-grid">
+        <div class="timeline-strip-node">
+          <div class="tsn-days">PHASE 1 • J1 À J3</div>
+          <div class="tsn-title">Onboarding & Collecte</div>
+          <div>Transmission du questionnaire technique, de vos photos réelles de chantiers et définition de la zone géographique de 30 km.</div>
+        </div>
+
+        <div class="timeline-strip-node">
+          <div class="tsn-days">PHASE 2 • J4 À J8</div>
+          <div class="tsn-title">Développement Landing & CRM</div>
+          <div>Conception de la page mobile haute conversion, arborescence du formulaire qualifiant et paramétrage du pipeline commercial.</div>
+        </div>
+
+        <div class="timeline-strip-node">
+          <div class="tsn-days">PHASE 3 • J9 À J11</div>
+          <div class="tsn-title">Tracking & Campagnes</div>
+          <div>Configuration Pixel/CAPI conforme RGPD, paramétrage du Business Manager Meta et rédaction de 3 à 5 maquettes d'annonces.</div>
+        </div>
+
+        <div class="timeline-strip-node" style="border-top-color: #10b981;">
+          <div class="tsn-days" style="color: #10b981;">PHASE 4 • J12 À J14</div>
+          <div class="tsn-title">Recette & Lancement</div>
+          <div>Formation visio CRM (45 min), recette finale, règlement du solde d'installation et activation des campagnes dans votre zone.</div>
+        </div>
+      </div>
+
+      <div class="section-legal-heading">
+        <span>Matrice du Périmètre : Inclus au Forfait vs Prestations en Supplément</span>
+        <span class="tag-section-num">Transparence</span>
+      </div>
+
+      <table class="table-financial-deal">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Brique Contractuelle</th>
+            <th style="width: 45%;">Prestation Incluse au Forfait</th>
+            <th style="width: 30%;">Supplément Éventuel (Sur Devis)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Landing Page</strong></td>
+            <td>1 page de conversion sur-mesure, rédaction persuasive, mobile-first, 2 cycles de révisions.</td>
+            <td>Pages secondaires, refonte de site multi-pages.</td>
+          </tr>
+          <tr>
+            <td><strong>Formulaire Qualifiant</strong></td>
+            <td>1 formulaire multi-étapes (filtrage code postal 30 km, bien, budget, délai).</td>
+            <td>Formulaires multi-marques ou passerelles bancaires.</td>
+          </tr>
+          <tr>
+            <td><strong>CRM & Automatisations</strong></td>
+            <td>1 pipeline configuré, alerte immédiate SMS/email pour chaque lead et email au prospect.</td>
+            <td>Intégrations ERP complexes (Batigest, Odoo, Sage).</td>
+          </tr>
+          <tr>
+            <td><strong>Meta Ads & Créations</strong></td>
+            <td>Configuration Meta Business Suite, Pixel/CAPI conforme RGPD, 3-5 créations/mois.</td>
+            <td>Shootings photo ou vidéo sur chantier, Google Ads.</td>
+          </tr>
+          <tr>
+            <td><strong>Maintenance & Suivi</strong></td>
+            <td>Hébergement SSL haute disponibilité, surveillance technique, 1 rapport mensuel ROI.</td>
+            <td>Développements informatiques hors périmètre.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="section-legal-heading">
+        <span>Principes Directeurs d'Exécution & Garanties Opérationnelles</span>
+        <span class="tag-section-num">Cadre Contractuel</span>
+      </div>
+
+      <div class="pillars-overview-grid">
+        <div class="pillar-overview-card">
+          <div class="poc-num">PRINCIPE 1</div>
+          <div class="poc-title">Propriété Exclusive</div>
+          <div class="poc-desc">Le compte publicitaire Meta, le pixel, les audiences et l'intégralité des prospects CRM constituent la propriété inaliénable du Client.</div>
+        </div>
+
+        <div class="pillar-overview-card">
+          <div class="poc-num">PRINCIPE 2</div>
+          <div class="poc-title">Obligation de Moyens</div>
+          <div class="poc-desc">Mise en œuvre des standards techniques avancés du marketing B2B. L'issue commerciale finale dépend de la tarification et réactivité du Client.</div>
+        </div>
+
+        <div class="pillar-overview-card">
+          <div class="poc-num">PRINCIPE 3</div>
+          <div class="poc-title">Conformité RGPD / APD</div>
+          <div class="poc-desc">Bandeau CMP de recueil du consentement préalable bloquant les traceurs tiers avant accord de l'internaute, conforme aux directives belges.</div>
+        </div>
+
+        <div class="pillar-overview-card">
+          <div class="poc-num">PRINCIPE 4</div>
+          <div class="poc-title">Période d'Apprentissage</div>
+          <div class="poc-desc">Engagement initial de 3 mois requis pour l'entraînement statistique du Pixel Meta, puis reconduction mensuelle avec préavis de 30 jours.</div>
+        </div>
+      </div>
+
+      <footer class="contract-folio-footer">
+        <div>Dossier Webely Réf. WBL-CONT-2026-001 — Page 2 sur 6</div>
+        <div class="paraphe-cluster">
+          <div class="paraphe-item">Initiales Webely : <span class="paraphe-line"></span></div>
+          <div class="paraphe-item">Initiales Client : <span class="paraphe-line"></span></div>
+        </div>
+      </footer>
+    </section>
+
+
+    <!-- ==========================================================================
+         PAGE 3 : CONTRAT-CADRE DE PRESTATION DE SERVICES B2B (DROIT BELGE)
+         Véritables articles juridiques numérotés avec rigueur (Articles 1 à 6)
+         ========================================================================== -->
+    <div class="a4-separator"></div>
+    <section class="a4-page-sheet">
+      <header class="contract-folio-header">
+        <div>Contrat-Cadre de Services B2B — Réf. : <strong>WBL-CONT-2026-001</strong></div>
+        <div>Conditions Générales d'Exécution (Articles 1 à 6)</div>
+      </header>
+
+      <div class="section-legal-heading">
+        <span>Conditions Générales de Collaboration B2B (Droit Belge)</span>
+        <span class="tag-section-num">Code Droit Économique</span>
+      </div>
+
+      <div class="legal-articles-stream">
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Article 1 —</span> Objet de la Convention & Nature des Prestations</div>
+          <p class="article-p">1.1. Le présent contrat a pour objet d'encadrer l'installation, la mise en service et l'exploitation continue par Webely au bénéfice du Client de la solution d'acquisition commerciale dénommée « Webely Acquisition System ».</p>
+          <p class="article-p">1.2. Le système comprend quatre composantes techniques interdépendantes : (a) une Landing Page dédiée à la conversion mobile locale, (b) un Formulaire dynamique filtrant les prospects par localisation, typologie de travaux, délai et budget, (c) un espace CRM centralisé notifiant le Client par email/SMS, et (d) la gestion des campagnes publicitaires géolocalisées sur les plateformes Meta (Facebook et Instagram).</p>
+        </div>
+
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Article 2 —</span> Déploiement, Révisions & Procédure de Recette Tacite</div>
+          <p class="article-p">2.1. Webely s'engage à finaliser les développements techniques dans un délai indicatif de quatorze (14) jours ouvrés à compter de la transmission intégrale par le Client des éléments requis lors de l'onboarding.</p>
+          <p class="article-p">2.2. Le Client bénéficie d'un droit à <strong>deux (2) cycles de révisions consolidées</strong> portant sur les maquettes graphiques et textuelles de la Landing Page.</p>
+          <p class="article-p">2.3. <strong>Recette tacite :</strong> À défaut de réserves écrites notifiées par le Client dans un délai de <strong>sept (7) jours ouvrés</strong> suivant la mise à disposition de la version finalisée, le système sera réputé irrévocablement accepté sans réserve, ouvrant droit à l'exigibilité immédiate du solde d'installation.</p>
+        </div>
+
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Article 3 —</span> Conditions Financières, Statut TVA & Retard de Paiement</div>
+          <p class="article-p">3.1. Les frais d'installation (Set-up) sont fixés à <strong>1 990,00 € Net</strong> (TVA non applicable), payables à raison de 50% d'acompte à la commande (995,00 €) et 50% à la livraison avant lancement des annonces (995,00 €).</p>
+          <p class="article-p">3.2. L'abonnement mensuel de gestion et maintenance est fixé à <strong>490,00 € Net / mois</strong> (TVA non applicable), payable d'avance le 1er jour de chaque mois par domiciliation bancaire SEPA ou débit récurrent sécurisé.</p>
+          <p class="article-p">3.3. <strong>Régime fiscal de TVA belge :</strong> Conformément à l'<strong>article 56bis du Code de la TVA belge</strong>, le Prestataire relève du <em>régime particulier de franchise de taxe pour les petites entreprises</em>. En conséquence, les montants facturés sont exonérés de TVA (mention obligatoire : « Régime particulier de franchise de taxe — TVA non applicable »). Aucun montant de TVA n'est facturé en sus.</p>
+          <p class="article-p">3.4. <strong>Application de la Loi belge du 2 août 2002 :</strong> Conformément à la législation relative à la lutte contre le retard de paiement dans les transactions commerciales, tout montant impayé à l'échéance portera de plein droit intérêt au taux légal commercial de la BCE majoré de 8 points, ainsi qu'une <strong>indemnité forfaitaire de 10% (avec un minimum de 250,00 €)</strong> au titre de clause pénale et 40,00 € pour frais de recouvrement. Webely pourra suspendre les campagnes après 7 jours d'impayé.</p>
+        </div>
+
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Article 4 —</span> Budget Publicitaire Média Meta Ads (Disjonction Totale)</div>
+          <p class="article-p">4.1. Le budget d'achat publicitaire Meta (conseillé entre 600 et 1 000 € HTVA/mois) est facturé et débité directement par Meta Platforms Ireland Ltd sur le moyen de paiement de l'entreprise cliente. <strong>Ce montant ne constitue à aucun moment du chiffre d'affaires pour Webely.</strong></p>
+          <p class="article-p">4.2. Le Client conserve la maîtrise intégrale de son plafond de dépenses sur Meta Business Suite.</p>
+        </div>
+
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Article 5 —</span> Obligations du Client & Diligence Commerciale</div>
+          <p class="article-p">5.1. Le Client s'oblige à transmettre l'ensemble des éléments de marque, photographies de chantiers et agréments professionnels requis sous cinq (5) jours ouvrés suivant la commande.</p>
+          <p class="article-p">5.2. <strong>Réactivité commerciale et exonération du Prestataire :</strong> Le Client reconnaît expressément que l'efficacité économique du système d'acquisition repose de manière déterminante sur la diligence du traitement commercial des demandes entrantes. Le Client s'oblige à contacter chaque prospect qualifié dans les meilleurs délais (délai cible : sous 2 à 4 heures ouvrées, et au maximum sous 24 heures). En aucun cas le Prestataire ne saurait être tenu pour responsable d'une déperdition de contacts ou d'un défaut de conversion imputable à une carence, un retard de traitement ou une indisponibilité opérationnelle du Client.</p>
+        </div>
+
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Article 6 —</span> Conformité des Allégations Métier (Directives SPF Économie)</div>
+          <p class="article-p">Le Client garantit sous sa seule responsabilité l'authenticité et la légalité des mentions sectorielles transmises (garanties décennales effectives, validité de l'enregistrement entrepreneur au SPF Finances, labels RESCert, primes régionales). Le Client garantit Webely contre toute réclamation de tiers ou de l'Inspection Économique.</p>
+        </div>
+      </div>
+
+      <footer class="contract-folio-footer">
+        <div>Dossier Webely Réf. WBL-CONT-2026-001 — Page 3 sur 6</div>
+        <div class="paraphe-cluster">
+          <div class="paraphe-item">Initiales Webely : <span class="paraphe-line"></span></div>
+          <div class="paraphe-item">Initiales Client : <span class="paraphe-line"></span></div>
+        </div>
+      </footer>
+    </section>
+
+
+    <!-- ==========================================================================
+         PAGE 4 : CONTRAT-CADRE DE SERVICES (ARTICLES 7 À 12 & SIGNATURES)
+         Articles légaux de responsabilité, durée et clôture formelle
+         ========================================================================== -->
+    <div class="a4-separator"></div>
+    <section class="a4-page-sheet">
+      <header class="contract-folio-header">
+        <div>Contrat-Cadre de Services B2B — Réf. : <strong>WBL-CONT-2026-001</strong></div>
+        <div>Conditions Générales d'Exécution (Articles 7 à 12 & Clôture)</div>
+      </header>
+
+      <div class="section-legal-heading">
+        <span>Conditions Générales de Collaboration B2B (Suite & Fin)</span>
+        <span class="tag-section-num">Clauses Substantatives</span>
+      </div>
+
+      <div class="legal-articles-stream">
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Article 7 —</span> Obligation de Moyens Renforcée & Absence de Garantie Commerciale</div>
+          <p class="article-p">7.1. Webely est soumise à une obligation de moyens stricte et mobilisera toutes les règles de l'art du marketing digital.</p>
+          <p class="article-p">7.2. <strong>WEBEL Y NE GARANTIT EN AUCUN CAS UN NOMBRE DÉFINI DE CHANTIERS SIGNÉS, DE VOLUME DE CHIFFRE D'AFFAIRES OU DE RENTABILITÉ SPÉCIFIQUE.</strong> La transformation finale d'un prospect qualifié en devis signé dépend exclusivement de facteurs sous le contrôle du Client (prix, qualité de présentation du devis, réactivité téléphonique, disponiblités et réputation locale).</p>
+        </div>
+
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Article 8 —</span> Propriété des Actifs, Données & Réversibilité</div>
+          <p class="article-p">8.1. Le compte publicitaire Meta, les audiences, le pixel, le nom de domaine et l'intégralité des données prospects collectées dans le CRM sont et demeurent la **propriété inaliénable et exclusive du Client**.</p>
+          <p class="article-p">8.2. En cas de résiliation du contrat, Webely exporte sans frais l'intégralité de la base de prospects au format standard (CSV/Excel) sous 15 jours.</p>
+        </div>
+
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Article 9 —</span> Durée, Engagement Initial Ferme & Résiliation Ordinaire</div>
+          <p class="article-p">9.1. Compte tenu des nécessités techniques d'apprentissage statistique des algorithmes Meta, le contrat de gestion est conclu pour une **durée initiale ferme de trois (3) mois consécutifs** prenant cours à la date du lancement des campagnes.</p>
+          <p class="article-p">9.2. À l'issue des 3 mois fermes, le contrat est reconduit tacitement de mois en mois. Chaque Partie peut y mettre fin à tout moment moyennant notification écrite sous **préavis de trente (30) jours calendaires**.</p>
+        </div>
+
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Article 10 —</span> Responsabilité & Plafonnement Contractuel</div>
+          <p class="article-p">La responsabilité pécuniaire cumulée de Webely au titre du contrat est expressément **plafonnée au montant des honoraires perçus par Webely au cours des trois (3) derniers mois** précédant le dommage. Exclusion formelle des préjudices indirects, pertes d'exploitation ou de chance.</p>
+        </div>
+
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Article 11 —</span> Confidentialité & Référencement Commercial</div>
+          <p class="article-p">Chaque Partie garantit la confidentialité des informations échangées. Le Client autorise Webely à citer sa dénomination et à présenter des captures anonymisées de résultats à titre de référence dans son portfolio professionnel.</p>
+        </div>
+
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Article 12 —</span> Droit Applicable & Juridiction Compétente</div>
+          <p class="article-p">Le présent contrat est régi exclusivement par le **droit belge**. Tout différend sera soumis, à défaut d'accord amiable sous 30 jours, à la **compétence exclusive des Tribunaux francophones de l'Entreprise de l'arrondissement judiciaire du siège de Webely**.</p>
+        </div>
+      </div>
+
+      <!-- RATIFICATION DES CONDITIONS GÉNÉRALES (SIGNATURE UNIQUE APPOSÉE EN PAGE 1) -->
+      <div class="contract-ratification-banner">
+        <div class="crb-title">Clause d'Indivisibilité & Ratification des Conditions Générales</div>
+        <p class="crb-text">
+          Les présentes Conditions Générales d'Exécution (Articles 1 à 12), l'Accord RGPD (Article 28) et le Mandat technique Meta Ads constituent les clauses substantielles régissant l'exécution de la convention. Elles sont formellement ratifiées, approuvées et rendues exécutoires par les Parties au moyen de la <strong>signature unique apposée au Bon de Commande (Page 1)</strong> et des paraphes apposés au bas de chaque feuillet, sans qu'une signature distincte ne soit requise.
+        </p>
+      </div>
+
+      <footer class="contract-folio-footer">
+        <div>Dossier Webely Réf. WBL-CONT-2026-001 — Page 4 sur 6</div>
+        <div class="paraphe-cluster">
+          <div class="paraphe-item">Initiales Webely : <span class="paraphe-line"></span></div>
+          <div class="paraphe-item">Initiales Client : <span class="paraphe-line"></span></div>
+        </div>
+      </footer>
+    </section>
+
+
+    <!-- ==========================================================================
+         PAGE 5 : ANNEXE RGPD — ACCORD DE SOUS-TRAITANCE (DPA ARTICLE 28)
+         Conformité Autorité de Protection des Données (APD) Belgique
+         ========================================================================== -->
+    <div class="a4-separator"></div>
+    <section class="a4-page-sheet">
+      <header class="contract-folio-header">
+        <div>Annexe 2 — Réf. : <strong>WBL-DPA-2026-001</strong></div>
+        <div>Accord de Sous-traitance RGPD (Article 28)</div>
+      </header>
+
+      <div class="section-legal-heading">
+        <span>Accord RGPD de Sous-traitance des Données Personnelles (DPA)</span>
+        <span class="tag-section-num">Règlement UE 2016/679</span>
+      </div>
+
+      <p style="font-size: 11.5px; margin-bottom: 12px; color: var(--ink-secondary);">
+        En vertu de l'article 28 du RGPD, le **Client agit en qualité de Responsable du Traitement** et **Webely en qualité de Sous-traitant** pour la collecte, la qualification et la transmission des coordonnées de prospects.
+      </p>
+
+      <div class="legal-articles-stream">
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Clause 1 —</span> Description & Finalités des Traitements Confiés</div>
+          <p class="article-p">1.1. <strong>Données traitées :</strong> Données d'identification (nom, prénom), de contact (téléphone, email), de localisation (code postal dans la zone de 30 km) et caractéristiques du projet (bâtiment, nature des travaux, délai et budget indicatif).</p>
+          <p class="article-p">1.2. <strong>Finalité :</strong> Capture, qualification, transmission instantanée au Client et confirmation automatisée au prospect. Aucune donnée n'est cédée ni commercialisée à des tiers.</p>
+        </div>
+
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Clause 2 —</span> Engagements de Sécurité & Confidentialité de Webely</div>
+          <p class="article-p">Webely s'engage à : (a) ne traiter les données que sur instruction documentée du Client, (b) astreindre ses collaborateurs à la confidentialité, (c) sécuriser les flux par chiffrement SSL/TLS et serveurs localisés au sein de l'Union Européenne, et (d) notifier toute violation de données au Client dans un délai maximal de <strong>48 heures</strong>.</p>
+        </div>
+
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Clause 3 —</span> Consentement Préalable aux Traceurs (Lignes Directrices APD Belgique)</div>
+          <p class="article-p">Conformément aux décisions de l'Autorité de Protection des Données belge, l'activation des traceurs publicitaires (Pixel Meta et Conversions API) est strictement conditionnée au <strong>recueil préalable du consentement libre et univoque (opt-in)</strong> de l'internaute via une bannière conforme (CMP) intégrée sur la Landing Page.</p>
+        </div>
+
+        <div class="article-row">
+          <div class="article-header-title"><span class="art-num">Clause 4 —</span> Sort des Données en Fin de Contrat</div>
+          <p class="article-p">À la cessation du contrat, Webely restitue sans frais au Client l'intégralité des données prospects sous format CSV standard ou procède à leur destruction définitive sécurisée sous un délai de trente (30) jours.</p>
+        </div>
+      </div>
+
+      <!-- VALIDATION DE L'ACCORD DE SOUS-TRAITANCE RGPD (SIGNATURE UNIQUE APPOSÉE EN PAGE 1) -->
+      <div class="contract-ratification-banner">
+        <div class="crb-title">Force Obligatoire de l'Accord de Sous-traitance RGPD</div>
+        <p class="crb-text">
+          Le présent Accord de Sous-traitance constitue l'Annexe 2 obligatoire au sens de l'Article 28 du RGPD et de la Loi belge du 30 juillet 2018 relative à la protection des personnes physiques à l'égard des traitements de données à caractère personnel. Il entre en vigueur de plein droit par l'effet de la <strong>signature unique apposée au Bon de Commande (Page 1)</strong> et lie les Parties pour toute la durée des traitements de données à caractère personnel confiés à Webely.
+        </p>
+      </div>
+
+      <footer class="contract-folio-footer">
+        <div>Dossier Webely Réf. WBL-CONT-2026-001 — Page 5 sur 6</div>
+        <div class="paraphe-cluster">
+          <div class="paraphe-item">Initiales Webely : <span class="paraphe-line"></span></div>
+          <div class="paraphe-item">Initiales Client : <span class="paraphe-line"></span></div>
+        </div>
+      </footer>
+    </section>
+
+
+    <!-- ==========================================================================
+         PAGE 6 : MANDAT PUBLICITAIRE META ADS & CANEVAS DE REPORTING MENSUEL
+         Dernière page du dossier contractuel
+         ========================================================================== -->
+    <div class="a4-separator"></div>
+    <section class="a4-page-sheet">
+      <header class="contract-folio-header">
+        <div>Annexes 3 & 5 — Standards Webely</div>
+        <div>Mandat Meta Ads & Matrice de Suivi ROI Mensuel</div>
+      </header>
+
+      <div class="section-legal-heading">
+        <span>Annexe 3 : Mandat d'Administration Publicitaire Meta Ads</span>
+        <span class="tag-section-num">Mandat d'Agence</span>
+      </div>
+
+      <div class="legal-articles-stream">
+        <p class="article-p">1. <strong>Délégation d'administration :</strong> Le Client mandate Webely pour administrer ses campagnes publicitaires depuis son compte Meta Business Suite, paramétrer le Pixel/CAPI et arbitrer les audiences locales dans son rayon d'action de 30 km.</p>
+        <p class="article-p">2. <strong>Propriété inconditionnelle :</strong> Le compte publicitaire et l'historique d'apprentissage demeurent la propriété inaliénable du Client.</p>
+        <p class="article-p">3. <strong>Validation des créations (48h) :</strong> Webely conçoit 3 à 5 variations d’annonces simples par mois. Le Client dispose de 48 heures ouvrées pour émettre des corrections. À défaut de retour dans ce délai, l'approbation est réputée acquise pour garantir la régularité du flux de prospects.</p>
+      </div>
+
+      <div class="section-legal-heading" style="margin-top: 20px;">
+        <span>Annexe 4 : Indicateurs Clés de Performance (KPIs) & Cadre du Rapport Mensuel</span>
+        <span class="tag-section-num">Pilotage Technique</span>
+      </div>
+
+      <table class="table-financial-deal">
+        <thead>
+          <tr>
+            <th>KPI Clé Supervisé</th>
+            <th>Métrique / Référence Standard</th>
+            <th>Finalité Opérationnelle pour le Client</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Dépenses publicitaires Meta Ads</strong></td>
+            <td>600 € à 1 000 € HTVA / mois</td>
+            <td>Données de facturation directe extraites de l'API Meta Platforms Ireland Ltd.</td>
+          </tr>
+          <tr>
+            <td><strong>Demandes qualifiées enregistrées (Leads)</strong></td>
+            <td>Volume mensuel selon zone et saison</td>
+            <td>Contacts filtrés par zone géographique, typologie de bien, projet et coordonnées vérifiées.</td>
+          </tr>
+          <tr>
+            <td><strong>Coût par prospect qualifié (CPL)</strong></td>
+            <td>Métrique d'optimisation continue</td>
+            <td>Ratio dépenses médias / demandes qualifiées, stabilisé après apprentissage algorithmique.</td>
+          </tr>
+          <tr>
+            <td><strong>Taux de délivrabilité & santé technique</strong></td>
+            <td>100 % des flux supervisés</td>
+            <td>Contrôle de disponibilité des formulaires, webhooks CRM et certificat de sécurité SSL.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- ATTESTATION LÉGALE FINALE & CERTIFICATION -->
+      <div class="contract-final-certification">
+        <div class="cfc-title">Validité & Intégrité Juridique du Dossier Webely</div>
+        <p class="cfc-text">
+          Le présent dossier contractuel (comprenant le Bon de Commande, le Rétroplanning d'exécution, la Matrice de périmètre, les Conditions Générales d'Exécution art. 1 à 12, l'Accord RGPD art. 28 et le Mandat publicitaire Meta Ads) forme un ensemble contractuel unique et indivisible régi par le <strong>Code de droit économique belge</strong> et le <strong>Règlement Général sur la Protection des Données (RGPD)</strong>.<br>
+          Parfaitement adapté pour signature électronique certifiée conforme eIDAS (Yousign, DocuSign, Adobe Sign) au moyen de la signature unique apposée au Bon de Commande (Page 1) et des paraphes apposés sur chaque feuillet.<br>
+          <strong>WEBELY • Exploité par Huw Cerasoli (Entreprise individuelle) • BCE / TVA : BE 1041.761.489 • Régime particulier de franchise de taxe (TVA non applicable — Art. 56bis Code TVA belge) • Bruxelles, Belgique.</strong>
+        </p>
+      </div>
+
+      <footer class="contract-folio-footer">
+        <div>Dossier Webely Réf. WBL-CONT-2026-001 — Page 6 sur 6 (Fin du Dossier)</div>
+        <div class="paraphe-cluster">
+          <div class="paraphe-item">Initiales Webely : <span class="paraphe-line"></span></div>
+          <div class="paraphe-item">Initiales Client : <span class="paraphe-line"></span></div>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+</body>
+</html>

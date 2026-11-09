@@ -1,0 +1,4585 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>webely. | Système d'Acquisition Client — Entreprises du Bâtiment &amp; Métiers Techniques</title>
+  <meta name="description" content="Transformez votre visibilité en nouvelles opportunités commerciales. Système d'acquisition client complet pour entreprises de rénovation, HVAC, toiture et métiers techniques." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#030305" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_BE" />
+  <meta property="og:title" content="webely. — Webely Acquisition System" />
+  <meta property="og:description" content="Un système complet, quatre composants : Conversion, Capture, Gestion CRM et Acquisition Meta Ads." />
+
+  <!-- Fonts : Plus Jakarta Sans (800 Display & UI), Syne (800 Logo Only) & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@800&display=swap" rel="stylesheet" />
+
+  <!-- Master Stylesheet V6.0 -->
+  <link rel="stylesheet" href="styles.css?v=7.0" />
+  <style id="webely-v6-inline">
+/* ==========================================================================
+   WEBELY ACQUISITION SYSTEM — V4.5 ($100K ARCHITECTURAL AGENCY EDITION)
+   Aesthetic : Locomotive / Linear / Vercel / Resend — Swiss Grid & Obsidian Luxury
+   Typography : Plus Jakarta Sans 800 (Display & UI) + Syne 800 (Exclusively for webely. Logo)
+   ========================================================================== */
+
+:root {
+  /* Obsidian Architectural Surfaces */
+  --bg-void: #030305;
+  --bg-main: #06060a;
+  --bg-elevated: #0a0a10;
+  --bg-panel: #0e0e17;
+  --bg-panel-hover: #131320;
+  --bg-glass: rgba(14, 14, 23, 0.78);
+
+  /* Structural Swiss Grid Hairlines */
+  --line-subtle: rgba(255, 255, 255, 0.065);
+  --line-medium: rgba(255, 255, 255, 0.11);
+  --line-strong: rgba(255, 255, 255, 0.18);
+  --line-mauve: rgba(139, 92, 246, 0.38);
+  --line-mauve-glow: rgba(167, 139, 250, 0.65);
+
+  /* Typography Hierarchy */
+  --text-white: #ffffff;
+  --text-primary: #f4f4f8;
+  --text-secondary: #9d9db5;
+  --text-muted: #64647a;
+
+  /* Signature Brand Accents (Pure Tech Mauve — Zero Pink) */
+  --mauve-core: #8b5cf6;
+  --mauve-bright: #a78bfa;
+  --mauve-soft: #ddd6fe;
+  --mauve-deep: #6d28d9;
+  --mauve-dark: #4c1d95;
+
+  /* Semantic Status Colors */
+  --emerald: #10b981;
+  --emerald-bg: rgba(16, 185, 129, 0.1);
+  --emerald-border: rgba(16, 185, 129, 0.28);
+  --danger: #ef4444;
+  --danger-bg: rgba(239, 68, 68, 0.1);
+
+  /* Bespoke Gradients */
+  --grad-brand: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 48%, #6d28d9 100%);
+  --grad-panel: linear-gradient(180deg, rgba(20, 20, 32, 0.75) 0%, rgba(9, 9, 15, 0.96) 100%);
+  --grad-panel-mauve: linear-gradient(165deg, rgba(46, 29, 89, 0.42) 0%, rgba(11, 11, 18, 0.96) 65%);
+  --grad-chrome: linear-gradient(165deg, #ffffff 0%, #ffffff 28%, #dcd8e8 42%, #8e8aa3 50%, #ffffff 56%, #b8b4c9 80%, #75708a 100%);
+  --grad-headline: linear-gradient(135deg, #ffffff 0%, #f3e8ff 45%, #a78bfa 100%);
+
+  /* Typography : Thick, Geometric Plus Jakarta Sans 800 for Titles, Syne strictly for Logo */
+  --font-logo: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Geometry & Elevation */
+  --container: 1240px;
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+  --radius-pill: 9999px;
+
+  --shadow-panel: 0 24px 60px -15px rgba(0, 0, 0, 0.8), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  --shadow-mauve: 0 20px 55px -10px rgba(124, 58, 237, 0.28), inset 0 1px 0 0 rgba(167, 139, 250, 0.28);
+  --shadow-btn: 0 10px 30px -5px rgba(124, 58, 237, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.35);
+}
+
+/* ==========================================================================
+   1. RESET & SWISS ARCHITECTURAL CANVAS
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-void);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Subtle Architectural Blueprint Grid + Top Violet Aura */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+  background-size: 80px 80px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 65% at 50% 0%, #000 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse 90% 65% at 50% 0%, #000 30%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: -240px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 700px;
+  background: radial-gradient(circle at 50% 35%, rgba(139, 92, 246, 0.15) 0%, rgba(109, 40, 217, 0.05) 48%, transparent 72%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 28px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   2. OFFICIAL LIQUID-CHROME BRAND LOGO & MINIMALIST AGENCY HEADER
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(3, 3, 5, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line-subtle);
+}
+
+.header-inner {
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand-cluster {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Exact Business Card Logo : Syne 800 Liquid Chrome + Rectangular Mauve Dot */
+.webely-logo {
+  font-family: var(--font-logo);
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: -0.055em;
+  display: inline-flex;
+  align-items: baseline;
+  line-height: 1;
+  user-select: none;
+}
+
+.webely-logo-word {
+  background: var(--grad-chrome);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.webely-logo-dot {
+  display: inline-block;
+  width: 9px;
+  height: 5.5px;
+  background: var(--grad-brand);
+  box-shadow: 0 0 14px rgba(139, 92, 246, 0.95);
+  margin-left: 2px;
+  border-radius: 1px;
+  transform: translateY(-1px);
+}
+
+.header-Exclusive-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line-subtle);
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--emerald);
+  box-shadow: 0 0 8px var(--emerald);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--text-white);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ==========================================================================
+   3. LUXURY BUTTON SYSTEM
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 11px 22px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--grad-brand);
+  color: var(--text-white);
+  box-shadow: var(--shadow-btn);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px -4px rgba(139, 92, 246, 0.8), inset 0 1px 0 0 rgba(255, 255, 255, 0.45);
+  filter: brightness(1.06);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+  border: 1px solid var(--line-medium);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--line-mauve);
+  color: var(--text-white);
+  transform: translateY(-1px);
+}
+
+.btn-lg {
+  padding: 16px 30px;
+  font-size: 15px;
+}
+
+/* ==========================================================================
+   4. SECTION 1 : MONUMENTAL CENTERED AGENCY HERO (NO CHEAP AI RENDERS)
+   ========================================================================== */
+.hero-section {
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 96px 0 108px;
+  position: relative;
+  border-bottom: 1px solid var(--line-subtle);
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-content-center {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 4.8vw, 62px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: var(--text-white);
+  margin-bottom: 24px;
+}
+
+.hero-title-accent {
+  background: var(--grad-headline);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-lead {
+  font-size: clamp(16px, 1.45vw, 19px);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 680px;
+  margin: 0 auto 36px;
+}
+
+.hero-lead strong {
+  color: var(--text-white);
+  font-weight: 700;
+}
+
+.hero-cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.hero-guarantees {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 26px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.hero-guarantee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-guarantee-item svg {
+  color: var(--mauve-bright);
+  flex-shrink: 0;
+}
+
+/* Bottom Hero Architectural Strip (4-Pillar Index Bar) */
+.hero-index-strip {
+  border-top: 1px solid var(--line-subtle);
+  background: rgba(10, 10, 16, 0.65);
+}
+
+.hero-index-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.hero-index-cell {
+  padding: 24px 26px;
+  border-right: 1px solid var(--line-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: background 0.2s ease;
+}
+
+.hero-index-cell:first-child {
+  border-left: 1px solid var(--line-subtle);
+}
+
+.hero-index-cell:hover {
+  background: rgba(139, 92, 246, 0.05);
+}
+
+.index-cell-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--mauve-bright);
+  letter-spacing: 0.08em;
+}
+
+.index-cell-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+}
+
+.index-cell-desc {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   5. GLOBAL SECTION HEADERS
+   ========================================================================== */
+.section {
+  padding: 110px 0;
+  position: relative;
+}
+
+.section-bordered {
+  border-top: 1px solid var(--line-subtle);
+  border-bottom: 1px solid var(--line-subtle);
+  background: linear-gradient(180deg, rgba(11, 11, 18, 0.7) 0%, rgba(5, 5, 9, 0.95) 100%);
+}
+
+.section-head-split {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 64px;
+  flex-wrap: wrap;
+}
+
+.section-head-left {
+  max-width: 680px;
+}
+
+.eyebrow-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--mauve-bright);
+  margin-bottom: 14px;
+}
+
+.eyebrow-tag::before {
+  content: "";
+  width: 18px;
+  height: 2px;
+  background: var(--mauve-core);
+  display: inline-block;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.6vw, 44px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: var(--text-white);
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 460px;
+}
+
+/* ==========================================================================
+   6. SECTION 2 : LES 4 COMPOSANTS DU SYSTÈME (SWISS ARCHITECTURAL MATRIX)
+   ========================================================================== */
+.architectural-matrix {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-panel);
+  margin-bottom: 64px;
+}
+
+.matrix-cell {
+  padding: 48px 44px;
+  border-right: 1px solid var(--line-subtle);
+  border-bottom: 1px solid var(--line-subtle);
+  position: relative;
+  background: var(--grad-panel);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background 0.3s ease;
+  overflow: hidden;
+}
+
+.matrix-cell:nth-child(2n) {
+  border-right: none;
+}
+
+.matrix-cell:nth-child(3),
+.matrix-cell:nth-child(4) {
+  border-bottom: none;
+}
+
+.matrix-cell:hover {
+  background: linear-gradient(180deg, rgba(28, 22, 48, 0.55) 0%, rgba(10, 10, 16, 0.98) 100%);
+}
+
+/* Giant Watermark Numeral in Plus Jakarta Sans 800 */
+.matrix-watermark {
+  position: absolute;
+  top: 18px;
+  right: 32px;
+  font-family: var(--font-display);
+  font-size: 88px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  background: linear-gradient(180deg, rgba(167, 139, 250, 0.14) 0%, rgba(167, 139, 250, 0.01) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+  user-select: none;
+}
+
+.matrix-cell-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.matrix-icon-frame {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(167, 139, 250, 0.32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mauve-bright);
+  box-shadow: 0 8px 20px -4px rgba(139, 92, 246, 0.25);
+}
+
+.matrix-step-tag {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mauve-bright);
+}
+
+.matrix-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.025em;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.matrix-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 32px;
+  max-width: 480px;
+  position: relative;
+  z-index: 1;
+}
+
+.matrix-specs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line-subtle);
+  position: relative;
+  z-index: 1;
+}
+
+.spec-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--line-subtle);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.spec-pill svg {
+  color: var(--emerald);
+  flex-shrink: 0;
+}
+
+/* 5-STEP CLIENT JOURNEY PIPELINE ("Le parcours est simple") */
+.journey-Variables-strip {
+  background: var(--grad-panel);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-xl);
+  padding: 38px 40px;
+  box-shadow: var(--shadow-panel);
+}
+
+.journey-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.journey-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+}
+
+.journey-track {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  position: relative;
+}
+
+.journey-node {
+  background: rgba(6, 6, 10, 0.8);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px 18px;
+  position: relative;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.journey-node:hover {
+  border-color: var(--line-mauve);
+  transform: translateY(-2px);
+}
+
+.journey-node.final-node {
+  border-color: var(--emerald-border);
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.08) 0%, rgba(6, 6, 10, 0.9) 100%);
+}
+
+.journey-step-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--mauve-bright);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.journey-node.final-node .journey-step-num {
+  color: var(--emerald);
+}
+
+.journey-node-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-white);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.journey-node-desc {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   7. SECTION 3 : LIVE SPLIT-SCREEN CONFIGURATOR & REAL-TIME CRM PREVIEW
+   ========================================================================== */
+.sector-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: rgba(14, 14, 23, 0.85);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-lg);
+  padding: 16px 24px;
+  margin-bottom: 28px;
+}
+
+.sector-bar-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sector-bar-label svg {
+  color: var(--mauve-bright);
+}
+
+.sector-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sector-btn {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--line-subtle);
+  color: var(--text-secondary);
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sector-btn:hover {
+  color: var(--text-white);
+  border-color: var(--line-mauve);
+}
+
+.sector-btn.active {
+  background: var(--grad-brand);
+  color: var(--text-white);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 6px 20px -4px rgba(139, 92, 246, 0.55);
+}
+
+/* Split-Screen Interactive Workbench */
+.live-workbench {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.workbench-panel {
+  background: var(--grad-panel);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-panel);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.workbench-panel.crm-live-panel {
+  background: var(--grad-panel-mauve);
+  border-color: var(--line-mauve);
+  box-shadow: var(--shadow-mauve);
+}
+
+.panel-window-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--line-subtle);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.panel-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--mauve-soft);
+  background: rgba(139, 92, 246, 0.14);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.panel-url-tag {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-secondary);
+}
+
+.sculpture-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--emerald);
+  background: var(--emerald-bg);
+  border: 1px solid var(--emerald-border);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.config-group {
+  margin-bottom: 18px;
+}
+
+.config-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.config-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 8px;
+}
+
+.config-label span.step-tag {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--mauve-bright);
+}
+
+.interactive-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.sim-option-btn {
+  background: rgba(6, 6, 10, 0.75);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sim-option-btn:hover {
+  border-color: var(--mauve-bright);
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.sim-option-btn.selected {
+  background: rgba(139, 92, 246, 0.18);
+  border-color: var(--mauve-bright);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.sim-opt-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.sim-opt-sub {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.interactive-pills-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.sim-pill-btn {
+  background: rgba(6, 6, 10, 0.75);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-xs);
+  padding: 9px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  text-align: center;
+}
+
+.sim-pill-btn:hover {
+  color: var(--text-white);
+  border-color: var(--mauve-bright);
+}
+
+.sim-pill-btn.selected {
+  background: rgba(139, 92, 246, 0.18);
+  border-color: var(--mauve-bright);
+  color: var(--text-white);
+}
+
+/* Interactive Prospect Contact Inputs Grid */
+.sim-inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.sim-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sim-field-group label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.sim-text-input {
+  width: 100%;
+  background: rgba(6, 6, 10, 0.85);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-xs);
+  padding: 9px 12px;
+  color: var(--text-white);
+  font-size: 13px;
+  font-weight: 500;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sim-text-input:focus {
+  border-color: var(--mauve-bright);
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+/* Right Side : Real-Time CRM Dossier & SMS Notification */
+.sms-toast-preview {
+  background: rgba(6, 6, 10, 0.9);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.sms-toast-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sms-icon-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--emerald-bg);
+  border: 1px solid var(--emerald-border);
+  color: var(--emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sms-toast-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.sms-toast-sub {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+}
+
+.crm-dossier-card {
+  background: rgba(6, 6, 10, 0.85);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dossier-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line-subtle);
+  margin-bottom: 18px;
+}
+
+.dossier-prospect-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+}
+
+.dossier-prospect-meta {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  margin-top: 3px;
+}
+
+.dossier-score-pill {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--emerald);
+  background: var(--emerald-bg);
+  border: 1px solid var(--emerald-border);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.dossier-data-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dossier-field {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+}
+
+.dossier-field-lbl {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+
+.dossier-field-val {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.dossier-field-val.highlight {
+  color: var(--mauve-bright);
+}
+
+.pipeline-stage-selector {
+  border-top: 1px solid var(--line-subtle);
+  padding-top: 16px;
+}
+
+.pipeline-stage-label {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pipeline-steps-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.pipe-stage-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-xs);
+  padding: 8px 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  text-align: center;
+}
+
+.pipe-stage-btn.active {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: var(--mauve-bright);
+  color: var(--text-white);
+}
+
+.pipe-stage-btn.signed.active {
+  background: var(--emerald-bg);
+  border-color: var(--emerald);
+  color: var(--emerald);
+}
+
+/* ==========================================================================
+   8. SECTION 4 : L'OFFRE UNIQUE CLÉ EN MAIN (ARCHITECTURAL INVESTMENT LEDGER)
+   ========================================================================== */
+.offer-ledger-grid {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.offer-investment-card {
+  background: var(--grad-panel-mauve);
+  border: 1px solid var(--line-mauve-glow);
+  border-radius: var(--radius-xl);
+  padding: 40px 36px;
+  box-shadow: var(--shadow-mauve);
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-investment-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+}
+
+.offer-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-white);
+  background: var(--grad-brand);
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 20px;
+}
+
+.offer-card-title {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.offer-card-sub {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+
+.price-blocks-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.price-block-item {
+  background: rgba(6, 6, 10, 0.82);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.price-block-item.recurring {
+  border-color: var(--line-mauve);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.14) 0%, rgba(6, 6, 10, 0.9) 100%);
+}
+
+.price-block-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--mauve-bright);
+  margin-bottom: 4px;
+}
+
+.price-block-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.price-block-note {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.price-block-figure {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.price-figure-main {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.price-figure-unit {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.media-budget-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line-subtle);
+  border-left: 3px solid var(--mauve-core);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.media-budget-box strong {
+  color: var(--text-white);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.vat-exemption-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--emerald-bg);
+  border: 1px solid var(--emerald-border);
+  color: var(--emerald);
+  padding: 11px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+
+.contract-downloads-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn-contract-dl {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: all 0.2s ease;
+}
+
+.btn-contract-dl:hover {
+  color: var(--text-white);
+  border-color: var(--mauve-bright);
+  background: rgba(139, 92, 246, 0.1);
+}
+
+/* Right Side of Offer : The 18 Deliverables Specification Modules */
+.deliverables-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.deliverable-module {
+  background: var(--grad-panel);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-xl);
+  padding: 32px 34px;
+  box-shadow: var(--shadow-panel);
+}
+
+.module-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--line-subtle);
+  gap: 12px;
+}
+
+.module-title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+}
+
+.module-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--mauve-bright);
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(167, 139, 250, 0.28);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.deliverables-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 24px;
+}
+
+.deliverable-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+.deliverable-item svg {
+  color: var(--emerald);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* ==========================================================================
+   9. SECTION 5 : ROI CALCULATOR & EXECUTIVE MARKET COMPARISON
+   ========================================================================== */
+.calculator-wrapper {
+  background: var(--grad-panel);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-xl);
+  padding: 44px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 44px;
+  align-items: center;
+  box-shadow: var(--shadow-panel);
+  margin-bottom: 84px;
+}
+
+.calc-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.calc-control-group {
+  background: rgba(6, 6, 10, 0.7);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calc-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.calc-val-display {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--mauve-bright);
+  background: rgba(139, 92, 246, 0.14);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  padding: 3px 10px;
+  border-radius: var(--radius-xs);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-pill);
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--text-white);
+  border: 4px solid var(--mauve-core);
+  box-shadow: 0 0 14px rgba(139, 92, 246, 0.85);
+  cursor: pointer;
+}
+
+.calc-result-box {
+  background: var(--grad-panel-mauve);
+  border: 1px solid var(--line-mauve);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  text-align: center;
+  box-shadow: var(--shadow-mauve);
+}
+
+.calc-result-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mauve-bright);
+  margin-bottom: 8px;
+}
+
+.calc-result-main {
+  font-family: var(--font-display);
+  font-size: 46px;
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+
+.calc-result-sub {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--emerald);
+  margin-bottom: 24px;
+}
+
+.calc-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid var(--line-subtle);
+  padding-top: 18px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calc-row strong {
+  color: var(--text-white);
+  font-family: var(--font-mono);
+}
+
+/* Comparison 3-Column Grid */
+.comparison-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.comparison-card {
+  background: var(--grad-panel);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-xl);
+  padding: 34px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: var(--shadow-panel);
+}
+
+.comparison-card.highlight {
+  background: var(--grad-panel-mauve);
+  border-color: var(--line-mauve-glow);
+  box-shadow: var(--shadow-mauve);
+}
+
+.comparison-card-head {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line-subtle);
+}
+
+.comparison-title {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 4px;
+}
+
+.comparison-sub {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.comparison-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 13.5px;
+}
+
+.comparison-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-secondary);
+}
+
+.comparison-card.highlight .comparison-list li {
+  color: var(--text-primary);
+}
+
+.comp-mark {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.comp-mark.yes {
+  background: var(--emerald-bg);
+  border: 1px solid var(--emerald-border);
+  color: var(--emerald);
+}
+
+.comp-mark.no {
+  background: var(--danger-bg);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: var(--danger);
+}
+
+/* ==========================================================================
+   10. ROADMAP 14 DAYS, FAQ & FOOTER
+   ========================================================================== */
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 96px;
+}
+
+.roadmap-card {
+  background: var(--grad-panel);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-panel);
+}
+
+.roadmap-step {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--mauve-bright);
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 14px;
+}
+
+.roadmap-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 8px;
+}
+
+.roadmap-desc {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.faq-list {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--bg-panel);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.faq-item.active {
+  border-color: var(--line-mauve);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  color: var(--text-white);
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.faq-icon {
+  transition: transform 0.25s ease;
+  color: var(--mauve-bright);
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 24px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 280px;
+  padding-bottom: 22px;
+}
+
+/* Final Monumental Callout */
+.final-cta-card {
+  background: var(--grad-panel-mauve);
+  border: 1px solid var(--line-mauve-glow);
+  border-radius: var(--radius-xl);
+  padding: 64px 48px;
+  text-align: center;
+  box-shadow: var(--shadow-mauve);
+  margin-top: 96px;
+}
+
+.final-cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.8vw, 44px);
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.035em;
+  max-width: 720px;
+  margin: 0 auto 16px;
+  line-height: 1.12;
+}
+
+.final-cta-desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--line-subtle);
+  padding: 72px 0 40px;
+  background: #020204;
+  font-size: 13.5px;
+  color: var(--text-muted);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.footer-brand p {
+  margin-top: 14px;
+  color: var(--text-secondary);
+  max-width: 380px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-display);
+  color: var(--text-white);
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--mauve-bright);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--line-subtle);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Sticky Floating Bar & Modal */
+.floating-cta-bar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(130px);
+  z-index: 99;
+  width: calc(100% - 32px);
+  max-width: 820px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.floating-cta-bar.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.floating-cta-inner {
+  background: rgba(8, 8, 14, 0.92);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--line-mauve-glow);
+  border-radius: var(--radius-pill);
+  padding: 10px 14px 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 30px rgba(139, 92, 246, 0.25);
+}
+
+.floating-cta-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 3, 5, 0.88);
+  backdrop-filter: blur(14px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  background: var(--bg-panel);
+  border: 1px solid var(--line-mauve-glow);
+  border-radius: var(--radius-xl);
+  max-width: 500px;
+  width: 100%;
+  padding: 36px;
+  position: relative;
+  box-shadow: var(--shadow-mauve);
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line-subtle);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.field-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.input-field {
+  width: 100%;
+  background: rgba(6, 6, 10, 0.9);
+  border: 1px solid var(--line-medium);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  color: var(--text-white);
+  font-size: 14px;
+  margin-bottom: 14px;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: var(--mauve-bright);
+}
+
+/* ==========================================================================
+   11. RESPONSIVE DESIGN (MOBILE & TABLET)
+   ========================================================================== */
+
+/* ==========================================================================
+   STRUCTURED CONFIRMATION MESSAGE CARD (STEP 4)
+   ========================================================================== */
+.conf-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+  text-align: left;
+}
+
+.conf-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.conf-badge-dossier {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: 9999px;
+}
+
+.conf-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+  animation: pulseDot 1.8s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(1.2); }
+}
+
+.conf-timestamp {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.conf-greeting {
+  font-size: 14px;
+  color: #0f172a;
+  line-height: 1.5;
+}
+
+.conf-subtext {
+  font-size: 12.5px;
+  color: #475569;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.conf-summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.conf-summary-cell {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.conf-summary-cell.conf-cell-full {
+  grid-column: 1 / -1;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.conf-cell-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.conf-cell-val {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.conf-cell-val.phone-highlight {
+  color: #047857;
+  font-weight: 700;
+}
+
+.conf-next-steps-card {
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.22);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.conf-next-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #065f46;
+}
+
+.conf-next-desc {
+  font-size: 12px;
+  color: #334155;
+  line-height: 1.45;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.conf-guarantees-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.conf-guarantee-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.conf-guarantee-item svg {
+  color: #10b981;
+}
+
+/* ==========================================================================
+   NOTION CRM TASKS CHECKLIST & REFINED STYLING
+   ========================================================================== */
+.notion-dossier-ref {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.42);
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.notion-tasks-section {
+  margin: 14px 0 16px 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.notion-tasks-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.46);
+  margin-bottom: 8px;
+}
+
+.notion-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.notion-todo-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.4;
+}
+
+.notion-todo-item.done {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.notion-checkbox {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  flex-shrink: 0;
+  color: transparent;
+}
+
+.notion-todo-item.done .notion-checkbox {
+  background: #10b981;
+  border-color: #10b981;
+  color: #000000;
+  font-weight: 800;
+}
+
+@media (max-width: 1040px) {
+  .hero-section {
+    min-height: auto;
+    padding: 64px 0 72px;
+  }
+  .live-workbench,
+  .offer-ledger-grid,
+  .calculator-wrapper,
+  .comparison-cards-grid,
+  .roadmap-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .architectural-matrix {
+    grid-template-columns: 1fr;
+  }
+  .matrix-cell {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line-subtle) !important;
+  }
+  .journey-track {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .main-nav,
+  .header-Exclusive-badge {
+    display: none;
+  }
+  .section {
+    padding: 72px 0;
+  }
+  .interactive-options-grid,
+  .sim-inputs-grid,
+  .deliverables-grid,
+  .dossier-data-grid,
+  .contract-downloads-row {
+    grid-template-columns: 1fr;
+  }
+  .matrix-cell,
+  .workbench-panel,
+  .offer-investment-card,
+  .deliverable-module,
+  .calculator-wrapper {
+    padding: 26px 20px;
+  }
+  .floating-cta-info span:last-child {
+    font-size: 11.5px;
+  }
+}
+
+
+/* ==========================================================================
+   V6.5 : MULTI-STEP INTERACTIVE WIZARD + IPHONE SMS + NOTION CRM
+   + SITE-WIDE EXPERT MICRO-INTERACTIONS, SPOTLIGHT & SCROLL REVEALS
+   ========================================================================== */
+
+/* 1. HERO HALF-SCREEN STUDIO VISUAL & MICRO-LEVITATION */
+/* 2. SITE-WIDE BUTTON SHIMMER, TACTILE PRESS & CARD SPOTLIGHT */
+.btn, .client-submit-btn, .sector-btn, .sim-option-btn, .sim-pill-btn, .notion-status-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:active, .client-submit-btn:active, .sector-btn:active {
+  transform: scale(0.97) !important;
+}
+
+.btn-primary::after, .client-submit-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 65%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.26), transparent);
+  transform: skewX(-22deg);
+  transition: left 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.btn-primary:hover::after, .client-submit-btn:hover::after {
+  left: 140%;
+}
+
+/* Dynamic Mouse-Tracking Spotlight on Cards */
+.matrix-cell,
+.journey-node,
+.deliverable-module,
+.comparison-card,
+.roadmap-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.matrix-cell::after,
+.journey-node::after,
+.deliverable-module::after,
+.comparison-card::after,
+.roadmap-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    460px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(139, 92, 246, 0.13),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.matrix-cell:hover::after,
+.journey-node:hover::after,
+.deliverable-module:hover::after,
+.comparison-card:hover::after,
+.roadmap-card:hover::after {
+  opacity: 1;
+}
+
+.matrix-cell:hover,
+.deliverable-module:hover,
+.comparison-card:hover,
+.roadmap-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(167, 139, 250, 0.42);
+}
+
+/* Scroll Reveal Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(26px) scale(0.985);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ==========================================================================
+   2. ARTISTIC 5-STEP FLOW WITH ANIMATED CURVED ARROWS ("LE PARCOURS EST SIMPLE")
+   ========================================================================== */
+.journey-Variables-strip {
+  background:
+    radial-gradient(900px circle at 50% 0%, rgba(139, 92, 246, 0.14), transparent 70%),
+    linear-gradient(180deg, rgba(16, 14, 28, 0.95) 0%, rgba(8, 8, 14, 0.98) 100%);
+  border: 1px solid rgba(167, 139, 250, 0.28);
+  border-radius: var(--radius-xl);
+  padding: 44px 42px 62px;
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.85), 0 0 50px -15px rgba(139, 92, 246, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.journey-flow-stage {
+  display: grid;
+  grid-template-columns: 1fr 54px 1fr 54px 1fr 54px 1fr 54px 1fr;
+  align-items: center;
+  margin-top: 18px;
+  position: relative;
+}
+
+@keyframes arrowDashFlow {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+@keyframes nodePulseGlow {
+  0%, 100% { box-shadow: 0 14px 34px -8px rgba(0, 0, 0, 0.7), 0 0 0 0 rgba(139, 92, 246, 0); }
+  50% { box-shadow: 0 18px 40px -6px rgba(139, 92, 246, 0.22), 0 0 24px -4px rgba(139, 92, 246, 0.22); }
+}
+
+.journey-node {
+  background: linear-gradient(165deg, rgba(26, 22, 45, 0.9) 0%, rgba(11, 10, 18, 0.96) 100%);
+  border: 1px solid rgba(167, 139, 250, 0.26);
+  border-radius: 18px;
+  padding: 22px 18px;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: nodePulseGlow 5s ease-in-out infinite;
+}
+
+/* Wave stagger: steps 2 and 4 dip slightly lower for an artistic flow */
+.journey-node.wave-down {
+  transform: translateY(22px);
+}
+
+.journey-node:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--mauve-bright);
+  box-shadow: 0 22px 45px -10px rgba(139, 92, 246, 0.35);
+}
+
+.journey-node.wave-down:hover {
+  transform: translateY(16px) scale(1.02);
+}
+
+.journey-node.final-node {
+  border-color: rgba(16, 185, 129, 0.48);
+  background: linear-gradient(165deg, rgba(16, 185, 129, 0.14) 0%, rgba(9, 14, 14, 0.96) 100%);
+}
+
+.journey-node-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.journey-orb-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(139, 92, 246, 0.16);
+  border: 1px solid rgba(167, 139, 250, 0.38);
+  color: #ddd6fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.25);
+}
+
+.journey-node.final-node .journey-orb-icon {
+  background: rgba(16, 185, 129, 0.18);
+  border-color: rgba(16, 185, 129, 0.45);
+  color: #10b981;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.25);
+}
+
+.journey-step-num {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--mauve-bright);
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-bottom: 0;
+}
+
+.journey-node.final-node .journey-step-num {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.journey-arrow-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 76px;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.journey-arrow-svg {
+  width: 54px;
+  height: 76px;
+  overflow: visible;
+}
+
+.journey-arrow-base {
+  fill: none;
+  stroke: rgba(167, 139, 250, 0.22);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.journey-arrow-stream {
+  fill: none;
+  stroke: #a78bfa;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-dasharray: 6 10;
+  animation: arrowDashFlow 1.3s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.85));
+}
+
+.journey-arrow-stream.emerald-stream {
+  stroke: #10b981;
+  filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.85));
+}
+
+.journey-arrow-head {
+  fill: #c4b5fd;
+  filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.9));
+}
+
+.journey-arrow-head.emerald-head {
+  fill: #10b981;
+  filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.9));
+}
+
+/* ==========================================================================
+   3. HIGH-VISIBILITY 4-CARD TRADE SELECTOR DOCK
+   ========================================================================== */
+.sector-dock-wrapper {
+  background: linear-gradient(180deg, rgba(22, 19, 38, 0.9) 0%, rgba(12, 11, 20, 0.95) 100%);
+  border: 1px solid rgba(167, 139, 250, 0.32);
+  border-radius: 22px;
+  padding: 22px 26px 24px;
+  margin-bottom: 34px;
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.75), 0 0 35px -10px rgba(139, 92, 246, 0.18);
+}
+
+.sector-dock-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.sector-dock-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.sector-step-pill {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--grad-brand);
+  padding: 4px 10px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.45);
+}
+
+.sector-dock-hint {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+.sector-cards-dock {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.sector-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 15px 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  position: relative;
+}
+
+.sector-btn:hover {
+  transform: translateY(-3px);
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(167, 139, 250, 0.45);
+}
+
+.sector-btn.active {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.28) 0%, rgba(91, 33, 182, 0.22) 100%);
+  border-color: #a78bfa;
+  box-shadow: 0 12px 28px -6px rgba(139, 92, 246, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.sector-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--mauve-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.sector-btn.active .sector-card-icon {
+  background: var(--grad-brand);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.5);
+}
+
+.sector-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.sector-card-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sector-card-sub {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sector-btn.active .sector-card-sub {
+  color: #ddd6fe;
+}
+
+/* ==========================================================================
+   4. LEFT PANEL : REAL CONTRACTOR 3-STEP ESTIMATION FUNNEL (EXACT USER REFERENCE)
+   ========================================================================== */
+.client-funnel-widget {
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow:
+    0 28px 70px -15px rgba(0, 0, 0, 0.75),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  min-height: 610px;
+  position: relative;
+  color: #0f172a;
+}
+
+/* Red accent triangle in top-left corner (matches contractor screenshot) */
+.contractor-corner-tab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 44px 44px 0 0;
+  border-color: #881337 transparent transparent transparent;
+  z-index: 5;
+}
+
+.contractor-form-header {
+  padding: 34px 34px 22px;
+  background: #ffffff;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.contractor-form-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+
+.contractor-form-sub {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.45;
+  margin: 0 0 24px;
+}
+
+/* 3-Step Horizontal Stepper with Top Accent Lines */
+.contractor-stepper-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.contractor-step-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.contractor-step-bar {
+  height: 3.5px;
+  border-radius: 2px;
+  background: #e2e8f0;
+  transition: background 0.25s ease;
+}
+
+.contractor-step-item.completed .contractor-step-bar {
+  background: #0f172a;
+}
+
+.contractor-step-item.active .contractor-step-bar {
+  background: #881337;
+}
+
+.contractor-step-num {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.contractor-step-lbl {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #64748b;
+  line-height: 1.3;
+}
+
+.contractor-step-item.active .contractor-step-lbl {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* Form Body & Step Panes */
+.contractor-form-body {
+  padding: 26px 34px 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+}
+
+.contractor-step-pane {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: 18px;
+}
+
+.contractor-step-pane.active {
+  display: flex;
+  animation: contractorSlide 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes contractorSlide {
+  from { opacity: 0; transform: translateX(12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Section Headings */
+.contractor-section-lbl {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0f172a;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* Pills Wrap */
+.contractor-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contractor-pill {
+  border-radius: 9999px;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  padding: 10px 18px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.contractor-pill:hover {
+  border-color: #881337;
+  color: #881337;
+  background: #fff1f2;
+}
+
+.contractor-pill.active {
+  background: #881337;
+  border-color: #881337;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(136, 19, 55, 0.32);
+}
+
+/* Text Input Fields */
+.contractor-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contractor-input-field {
+  width: 100%;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  padding: 14px 18px;
+  font-size: 14.5px;
+  color: #0f172a;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.contractor-input-field::placeholder {
+  color: #94a3b8;
+}
+
+.contractor-input-field:focus {
+  outline: none;
+  border-color: #881337;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(136, 19, 55, 0.12);
+}
+
+/* Nav Row & Buttons */
+.contractor-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.contractor-btn-back {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.contractor-btn-back:hover {
+  background: #f1f5f9;
+}
+
+.contractor-btn-next {
+  border-radius: 9999px;
+  background: #881337;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 13px 30px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  box-shadow: 0 6px 20px rgba(136, 19, 55, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-left: auto;
+}
+
+.contractor-btn-next:hover {
+  background: #9f1239;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 26px rgba(136, 19, 55, 0.45);
+}
+
+.contractor-footer-note {
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.5;
+  margin-top: 14px;
+  text-align: left;
+}
+
+.contractor-footer-note a {
+  color: #881337;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.contractor-quickfill-link {
+  background: none;
+  border: none;
+  color: #881337;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 4px 6px;
+}
+
+.contractor-quickfill-link:hover {
+  color: #9f1239;
+}
+
+/* Confirmation Screen */
+.contractor-finish-box {
+  text-align: center;
+  padding: 24px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 12px;
+}
+
+.contractor-finish-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ecfdf5;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(5, 150, 105, 0.2);
+}
+
+.contractor-finish-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+}
+
+.contractor-finish-sub {
+  font-size: 13.5px;
+  color: #64748b;
+  max-width: 380px;
+  line-height: 1.5;
+}
+
+.contractor-finish-summary {
+  width: 100%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 12.5px;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.contractor-btn-restart {
+  margin-top: 10px;
+  border-radius: 9999px;
+  background: #f1f5f9;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 22px;
+  border: 1px solid #cbd5e1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.contractor-btn-restart:hover {
+  background: #e2e8f0;
+}
+
+/* ==========================================================================
+   5. RIGHT PANEL : IPHONE SMS BANNER + NOTION CRM (WITH PROGRESSIVE WAITING STATES)
+   ========================================================================== */
+.right-sim-column {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.iphone-sms-banner {
+  background: rgba(38, 38, 44, 0.88);
+  backdrop-filter: blur(30px) saturate(190%);
+  -webkit-backdrop-filter: blur(30px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 22px;
+  padding: 15px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.iphone-sms-banner.sms-pending {
+  background: rgba(24, 24, 32, 0.78);
+  border: 1px dashed rgba(167, 139, 250, 0.35);
+}
+
+.iphone-sms-banner.sms-pending .ios-messages-icon {
+  background: rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  color: #c4b5fd;
+  box-shadow: none;
+}
+
+.iphone-sms-banner.sms-dispatched {
+  transform: translateY(2px) scale(1.025);
+  border: 1px solid rgba(82, 215, 105, 0.7);
+  box-shadow: 0 24px 55px rgba(40, 205, 65, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.ios-messages-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #52d769 0%, #28cd41 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(40, 205, 65, 0.35);
+  margin-top: 2px;
+  transition: all 0.3s ease;
+}
+
+.ios-sms-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.ios-sms-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.ios-sms-appname {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.01em;
+}
+
+.ios-sms-time {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ios-sms-sender {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+
+.ios-sms-body {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
+}
+
+/* Authentic Notion Dark-Mode CRM Contact Page */
+.notion-page-card {
+  background: #191919;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 28px 65px -15px rgba(0, 0, 0, 0.85);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  transition: box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.notion-topbar {
+  background: #202020;
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.notion-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.notion-breadcrumbs span.crumb-sep {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.notion-breadcrumbs strong {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.notion-cover-strip {
+  height: 36px;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.35) 0%, rgba(59, 130, 246, 0.22) 50%, rgba(16, 185, 129, 0.25) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.notion-body {
+  padding: 20px 26px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.notion-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.notion-page-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 15px;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.notion-page-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.notion-page-title.is-placeholder {
+  color: rgba(255, 255, 255, 0.38);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.notion-props-table {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 10px 0;
+  margin-bottom: 16px;
+}
+
+.notion-prop-row {
+  display: grid;
+  grid-template-columns: 148px 1fr;
+  align-items: center;
+  min-height: 32px;
+  padding: 4px 6px;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.notion-prop-row:hover {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+@keyframes notionRowFlash {
+  0% { background: rgba(139, 92, 246, 0.34); }
+  100% { background: transparent; }
+}
+
+.notion-prop-row.row-flashed {
+  animation: notionRowFlash 0.65s ease-out;
+}
+
+.notion-prop-key {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+}
+
+.notion-prop-key svg {
+  width: 14px;
+  height: 14px;
+  color: rgba(255, 255, 255, 0.42);
+  flex-shrink: 0;
+}
+
+.notion-prop-val {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.notion-empty-placeholder {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.32);
+  font-style: italic;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.notion-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notion-tag.purple { background: rgba(139, 92, 246, 0.24); color: #ddd6fe; }
+.notion-tag.green { background: rgba(16, 185, 129, 0.22); color: #a7f3d0; }
+.notion-tag.blue { background: rgba(59, 130, 246, 0.24); color: #bfdbfe; }
+.notion-tag.amber { background: rgba(245, 158, 11, 0.24); color: #fde68a; }
+.notion-tag.gray { background: rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.85); }
+
+.notion-link {
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.25);
+  text-underline-offset: 3px;
+}
+
+.notion-status-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.notion-status-btn {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11.5px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.55);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.notion-status-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.notion-status-btn.active {
+  background: rgba(139, 92, 246, 0.28);
+  color: #ede9fe;
+  border-color: rgba(167, 139, 250, 0.45);
+}
+
+.notion-status-btn.signed.active {
+  background: rgba(16, 185, 129, 0.26);
+  color: #a7f3d0;
+  border-color: rgba(16, 185, 129, 0.45);
+}
+
+.notion-callout {
+  background: #222222;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.notion-callout-icon {
+  color: #10b981;
+  flex-shrink: 0;
+  display: flex;
+}
+
+@media (max-width: 1040px) {
+  .journey-flow-stage {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .journey-node.wave-down {
+    transform: none;
+  }
+  .journey-arrow-connector {
+    width: 100%;
+    height: 38px;
+    transform: rotate(90deg);
+  }
+  .sector-cards-dock {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .sector-cards-dock {
+    grid-template-columns: 1fr;
+  }
+  .wizard-stepper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wizard-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .notion-prop-row {
+    grid-template-columns: 120px 1fr;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER : MINIMALIST ARCHITECTURAL AGENCY BAR
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand-cluster">
+        <a href="#" aria-label="Webely Accueil">
+          <span class="webely-logo">
+            <span class="webely-logo-word">webely</span><span class="webely-logo-dot"></span>
+          </span>
+        </a>
+        <span class="header-Exclusive-badge">
+          <span class="live-dot"></span>
+          <span>PROSPECTS 100 % EXCLUSIFS</span>
+        </span>
+      </div>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#systeme" class="nav-link">Architecture</a>
+        <a href="#demonstration" class="nav-link">Simulateur Live</a>
+        <a href="#tarifs" class="nav-link">Offre &amp; Tarif</a>
+        <a href="#calculateur" class="nav-link">Rentabilité</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#" class="btn btn-primary trigger-audit-modal">
+          <span>Appel Découverte (10 min)</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         SECTION 1 : MONUMENTAL CENTERED AGENCY HERO (NO CHEAP AI RENDERS)
+         ====================================================================== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content-center">
+          <h1 class="hero-title">
+            Transformez votre visibilité en <span class="hero-title-accent">nouvelles opportunités commerciales.</span>
+          </h1>
+
+          <p class="hero-lead">
+            Système d'acquisition client clé en main pour entreprises de services, du bâtiment et des métiers techniques. Ne dépendez plus des plateformes qui revendent le même contact à 5 concurrents : <strong>webely.</strong> déploie votre propre infrastructure propriétaire.
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="#" class="btn btn-primary btn-lg trigger-audit-modal">
+              <span>Réserver un appel de 10 min (Sans engagement)</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#demonstration" class="btn btn-secondary btn-lg">
+              <span>Tester le simulateur en direct</span>
+            </a>
+          </div>
+
+          <div class="hero-guarantees">
+            <span class="hero-guarantee-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Diagnostic rapide en 10 min
+            </span>
+            <span class="hero-guarantee-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Demandes 100 % exclusives
+            </span>
+            <span class="hero-guarantee-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Déployé en 14 jours
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2 : UN SYSTÈME COMPLET, QUATRE COMPOSANTS (SWISS MATRIX RESTORED)
+         ====================================================================== -->
+    <section id="systeme" class="section">
+      <div class="container">
+        <div class="section-head-split">
+          <div class="section-head-left">
+            <h2 class="section-title">Un système complet, quatre composants.</h2>
+          </div>
+          <p class="section-subtitle">
+            Chaque composant est conçu sur mesure pour capter la demande locale, filtrer les curieux et livrer des opportunités prêtes à être chiffrées.
+          </p>
+        </div>
+
+        <!-- 2x2 SWISS ARCHITECTURAL MATRIX -->
+        <div class="architectural-matrix">
+          <!-- Component 01 -->
+          <article class="matrix-cell">
+            <span class="matrix-watermark" aria-hidden="true">01</span>
+            <div>
+              <div class="matrix-cell-top">
+                <div class="matrix-icon-frame">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <span class="matrix-step-tag">01 — CONVERSION</span>
+              </div>
+              <h3 class="matrix-title">Landing Page Haute Conversion</h3>
+              <p class="matrix-desc">
+                Une landing page professionnelle, ultra-rapide et optimisée pour convertir vos visiteurs en demandes de devis concrètes en mettant en valeur vos réalisations et agréments.
+              </p>
+            </div>
+            <div class="matrix-specs-row">
+              <span class="spec-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Google PageSpeed 100/100
+              </span>
+              <span class="spec-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Architecture Mobile-First
+              </span>
+              <span class="spec-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                100% votre propriété
+              </span>
+            </div>
+          </article>
+
+          <!-- Component 02 -->
+          <article class="matrix-cell">
+            <span class="matrix-watermark" aria-hidden="true">02</span>
+            <div>
+              <div class="matrix-cell-top">
+                <div class="matrix-icon-frame">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                </div>
+                <span class="matrix-step-tag">02 — CAPTURE</span>
+              </div>
+              <h3 class="matrix-title">Formulaires d'Éligibilité &amp; Devis</h3>
+              <p class="matrix-desc">
+                Des simulateurs structurés qui récoltent les informations essentielles avant tout appel : type exact de projet, éligibilité aux primes, code postal, délais, budget et coordonnées.
+              </p>
+            </div>
+            <div class="matrix-specs-row">
+              <span class="spec-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Simulateur Primes &amp; Devis
+              </span>
+              <span class="spec-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Qualification budgétaire
+              </span>
+              <span class="spec-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Zéro perte de temps
+              </span>
+            </div>
+          </article>
+
+          <!-- Component 03 -->
+          <article class="matrix-cell">
+            <span class="matrix-watermark" aria-hidden="true">03</span>
+            <div>
+              <div class="matrix-cell-top">
+                <div class="matrix-icon-frame">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                </div>
+                <span class="matrix-step-tag">03 — GESTION</span>
+              </div>
+              <h3 class="matrix-title">CRM Centralisé &amp; Alertes Temps Réel</h3>
+              <p class="matrix-desc">
+                Un espace CRM clair qui enregistre automatiquement les demandes, notifie le dirigeant par SMS/Email en 1,2 seconde, organise les prospects et permet de suivre leur progression.
+              </p>
+            </div>
+            <div class="matrix-specs-row">
+              <span class="spec-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Alerte GSM instantanée
+              </span>
+              <span class="spec-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Confirmation email au prospect
+              </span>
+              <span class="spec-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Guide de prise en main inclus
+              </span>
+            </div>
+          </article>
+
+          <!-- Component 04 -->
+          <article class="matrix-cell">
+            <span class="matrix-watermark" aria-hidden="true">04</span>
+            <div>
+              <div class="matrix-cell-top">
+                <div class="matrix-icon-frame">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                </div>
+                <span class="matrix-step-tag">04 — ACQUISITION</span>
+              </div>
+              <h3 class="matrix-title">Campagnes Facebook &amp; Instagram</h3>
+              <p class="matrix-desc">
+                Des campagnes publicitaires Meta Ads qui ciblent précisément les propriétaires situés dans les communes d'intervention de votre entreprise.
+              </p>
+            </div>
+            <div class="matrix-specs-row">
+              <span class="spec-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                3 à 5 variations créatives / mois
+              </span>
+              <span class="spec-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Pixel &amp; Tracking CAPI
+              </span>
+              <span class="spec-pill">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Prospects 100 % dédiés
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <!-- 5-STEP ARTISTIC FLOW WITH ANIMATED CURVED ARROWS ("Le parcours est simple") -->
+        <div class="journey-Variables-strip">
+          <div class="journey-header">
+            <div>
+              <h3 class="journey-title">Le parcours est simple, fluide et 100% automatisé.</h3>
+            </div>
+            <a href="#" class="btn btn-secondary trigger-audit-modal">
+              <span>Découvrir le système en 10 min →</span>
+            </a>
+          </div>
+
+          <div class="journey-flow-stage">
+            <!-- STEP 01 -->
+            <div class="journey-node">
+              <div class="journey-node-top">
+                <div class="journey-orb-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                </div>
+                <span class="journey-step-num">01 • CIBLAGE</span>
+              </div>
+              <div class="journey-node-name">Publicité Meta Ads</div>
+              <div class="journey-node-desc">Cible les propriétaires sur vos communes d'intervention.</div>
+            </div>
+
+            <!-- ANIMATED CURVED ARROW 01 -> 02 (Arcs Down) -->
+            <div class="journey-arrow-connector" aria-hidden="true">
+              <svg class="journey-arrow-svg" viewBox="0 0 54 76">
+                <path class="journey-arrow-base" d="M 2 22 C 24 22, 26 54, 46 54" />
+                <path class="journey-arrow-stream" d="M 2 22 C 24 22, 26 54, 46 54" />
+                <polygon class="journey-arrow-head" points="43,49 52,54 43,59" />
+              </svg>
+            </div>
+
+            <!-- STEP 02 (Wave Down) -->
+            <div class="journey-node wave-down">
+              <div class="journey-node-top">
+                <div class="journey-orb-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <span class="journey-step-num">02 • VITRINE</span>
+              </div>
+              <div class="journey-node-name">Landing Page Dédiée</div>
+              <div class="journey-node-desc">Présente vos réalisations, rassure et engage le visiteur.</div>
+            </div>
+
+            <!-- ANIMATED CURVED ARROW 02 -> 03 (Arcs Up) -->
+            <div class="journey-arrow-connector" aria-hidden="true">
+              <svg class="journey-arrow-svg" viewBox="0 0 54 76">
+                <path class="journey-arrow-base" d="M 2 54 C 24 54, 26 22, 46 22" />
+                <path class="journey-arrow-stream" d="M 2 54 C 24 54, 26 22, 46 22" />
+                <polygon class="journey-arrow-head" points="43,17 52,22 43,27" />
+              </svg>
+            </div>
+
+            <!-- STEP 03 -->
+            <div class="journey-node">
+              <div class="journey-node-top">
+                <div class="journey-orb-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                </div>
+                <span class="journey-step-num">03 • FILTRAGE</span>
+              </div>
+              <div class="journey-node-name">Simulateur Primes &amp; Devis</div>
+              <div class="journey-node-desc">Qualifie le projet, l'ancienneté du bien, le budget et le délai.</div>
+            </div>
+
+            <!-- ANIMATED CURVED ARROW 03 -> 04 (Arcs Down) -->
+            <div class="journey-arrow-connector" aria-hidden="true">
+              <svg class="journey-arrow-svg" viewBox="0 0 54 76">
+                <path class="journey-arrow-base" d="M 2 22 C 24 22, 26 54, 46 54" />
+                <path class="journey-arrow-stream" d="M 2 22 C 24 22, 26 54, 46 54" />
+                <polygon class="journey-arrow-head" points="43,49 52,54 43,59" />
+              </svg>
+            </div>
+
+            <!-- STEP 04 (Wave Down) -->
+            <div class="journey-node wave-down">
+              <div class="journey-node-top">
+                <div class="journey-orb-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <span class="journey-step-num">04 • ALERTE</span>
+              </div>
+              <div class="journey-node-name">SMS Téléphone &amp; Fiche CRM</div>
+              <div class="journey-node-desc">Alerte instantanée sur votre GSM et fiche créée dans votre CRM.</div>
+            </div>
+
+            <!-- ANIMATED CURVED ARROW 04 -> 05 (Arcs Up Emerald) -->
+            <div class="journey-arrow-connector" aria-hidden="true">
+              <svg class="journey-arrow-svg" viewBox="0 0 54 76">
+                <path class="journey-arrow-base" d="M 2 54 C 24 54, 26 22, 46 22" />
+                <path class="journey-arrow-stream emerald-stream" d="M 2 54 C 24 54, 26 22, 46 22" />
+                <polygon class="journey-arrow-head emerald-head" points="43,17 52,22 43,27" />
+              </svg>
+            </div>
+
+            <!-- STEP 05 (Final Emerald Node) -->
+            <div class="journey-node final-node">
+              <div class="journey-node-top">
+                <div class="journey-orb-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span class="journey-step-num">05 • RASSURANCE</span>
+              </div>
+              <div class="journey-node-name">Confirmation au Prospect</div>
+              <div class="journey-node-desc">Le client reçoit immédiatement son email de prise en charge.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3 : SIMULATEUR CLIENT RÉEL + NOTIF SMS IPHONE & FICHE NOTION
+         ====================================================================== -->
+    <section id="demonstration" class="section section-bordered">
+      <div class="container">
+        <div class="section-head-split">
+          <div class="section-head-left">
+            <h2 class="section-title">Le simulateur de votre site à gauche, votre téléphone &amp; CRM à droite.</h2>
+          </div>
+          <p class="section-subtitle">
+            Choisissez votre métier ci-dessous, puis testez le simulateur comme un vrai client : votre CRM et l'alerte sur votre téléphone se synchronisent en direct dès la validation.
+          </p>
+        </div>
+
+        <!-- HIGH-VISIBILITY 4-CARD TRADE SELECTOR DOCK -->
+        <div class="sector-dock-wrapper">
+          <div class="sector-dock-header">
+            <div class="sector-dock-title">
+              <span class="sector-step-pill">1. VOTRE MÉTIER</span>
+              <span>Sélectionnez votre secteur d'activité pour adapter automatiquement le formulaire :</span>
+            </div>
+            <span class="sector-dock-hint">Cliquez sur une carte métier ↓</span>
+          </div>
+
+          <div class="sector-cards-dock" role="tablist">
+            <button type="button" class="sector-btn active" data-sector="hvac">
+              <div class="sector-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div class="sector-card-text">
+                <span class="sector-card-name">Pompe à Chaleur &amp; HVAC</span>
+                <span class="sector-card-sub">PAC Air/Eau • Clim • Boiler</span>
+              </div>
+            </button>
+
+            <button type="button" class="sector-btn" data-sector="renovation">
+              <div class="sector-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="sector-card-text">
+                <span class="sector-card-name">Rénovation Générale</span>
+                <span class="sector-card-sub">Transformation • Annexe • SDB</span>
+              </div>
+            </button>
+
+            <button type="button" class="sector-btn" data-sector="toiture">
+              <div class="sector-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 2 9 12 16 22 9 12 2"/><polyline points="2 15 12 22 22 15"/></svg>
+              </div>
+              <div class="sector-card-text">
+                <span class="sector-card-name">Toiture &amp; Isolation</span>
+                <span class="sector-card-sub">Couverture • Sarking • EPDM</span>
+              </div>
+            </button>
+
+            <button type="button" class="sector-btn" data-sector="electricite">
+              <div class="sector-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div class="sector-card-text">
+                <span class="sector-card-name">Électricité &amp; Solaire</span>
+                <span class="sector-card-sub">Photovoltaïque • Batterie • RGIE</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Split-Screen Workbench -->
+        <div class="live-workbench">
+          <!-- LEFT PANEL : Real Contractor 3-Step Estimation Funnel (Exact User Reference) -->
+          <div class="client-funnel-widget">
+            <!-- Red accent triangle in top-left corner (matches contractor screenshot) -->
+            <div class="contractor-corner-tab" aria-hidden="true"></div>
+
+            <div class="contractor-form-header">
+              <h3 class="contractor-form-title">ESTIMEZ VOTRE PROJET EN 3 QUESTIONS</h3>
+              <p class="contractor-form-sub">
+                Une minute, et votre demande est chez nous. On vous rappelle pour fixer la visite.
+              </p>
+
+              <!-- 3-Step Horizontal Stepper with Top Accent Lines -->
+              <div class="contractor-stepper-row" role="tablist" aria-label="Étapes de l'estimation">
+                <!-- Step 1 -->
+                <div class="contractor-step-item active" data-stepper="1">
+                  <div class="contractor-step-bar"></div>
+                  <div class="contractor-step-num">1</div>
+                  <div class="contractor-step-lbl">Quels travaux ?</div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="contractor-step-item" data-stepper="2">
+                  <div class="contractor-step-bar"></div>
+                  <div class="contractor-step-num">2</div>
+                  <div class="contractor-step-lbl">Où et quelle surface ?</div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="contractor-step-item" data-stepper="3">
+                  <div class="contractor-step-bar"></div>
+                  <div class="contractor-step-num">3</div>
+                  <div class="contractor-step-lbl">Pour quand ?</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contractor-form-body">
+              <!-- STEP 1 : CHOISISSEZ UN OU PLUSIEURS MÉTIERS -->
+              <div class="contractor-step-pane active" id="contractor-step-1" data-step="1">
+                <div>
+                  <label class="contractor-section-lbl">CHOISISSEZ UN OU PLUSIEURS MÉTIERS</label>
+                  <div class="contractor-pills-wrap" id="sim-trades-pills">
+                    <button type="button" class="contractor-pill active" data-trade="Rénovation intérieure et extérieure">Rénovation intérieure et extérieure</button>
+                    <button type="button" class="contractor-pill" data-trade="Toitures">Toitures</button>
+                    <button type="button" class="contractor-pill" data-trade="Chauffage, ventilation, climatisation">Chauffage, ventilation, climatisation</button>
+                    <button type="button" class="contractor-pill" data-trade="Plomberie et sanitaires">Plomberie et sanitaires</button>
+                    <button type="button" class="contractor-pill" data-trade="Électricité">Électricité</button>
+                    <button type="button" class="contractor-pill" data-trade="Menuiserie">Menuiserie</button>
+                    <button type="button" class="contractor-pill" data-trade="Ferronnerie">Ferronnerie</button>
+                    <button type="button" class="contractor-pill" data-trade="Génie civil léger">Génie civil léger</button>
+                  </div>
+                </div>
+
+                <div class="contractor-nav-row">
+                  <span></span>
+                  <button type="button" class="contractor-btn-next" data-goto-step="2">
+                    <span>SUIVANT</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- STEP 2 : COMMUNE + SURFACE CONCERNÉE -->
+              <div class="contractor-step-pane" id="contractor-step-2" data-step="2">
+                <div>
+                  <div class="contractor-field-group">
+                    <label class="contractor-section-lbl" for="sim-input-commune">COMMUNE</label>
+                    <input type="text" id="sim-input-commune" class="contractor-input-field" placeholder="Ixelles, Zaventem, Uccle..." />
+                  </div>
+
+                  <div class="contractor-field-group" style="margin-top: 18px;">
+                    <label class="contractor-section-lbl">SURFACE CONCERNÉE</label>
+                    <div class="contractor-pills-wrap" id="sim-surface-pills">
+                      <button type="button" class="contractor-pill" data-surface="Une pièce">Une pièce</button>
+                      <button type="button" class="contractor-pill" data-surface="Un étage">Un étage</button>
+                      <button type="button" class="contractor-pill active" data-surface="Toute la maison">Toute la maison</button>
+                      <button type="button" class="contractor-pill" data-surface="Extérieur uniquement">Extérieur uniquement</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="contractor-nav-row">
+                    <button type="button" class="contractor-btn-back" data-goto-step="1">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                      <span>Retour</span>
+                    </button>
+                    <button type="button" class="contractor-btn-next" data-goto-step="3">
+                      <span>SUIVANT</span>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                  </div>
+                  <div class="contractor-footer-note">
+                    Rien n'est stocké sur ce site : votre demande part par e-mail au bureau. Plus de détails ou des photos ? →
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 3 : DÉBUT SOUHAITÉ + NOM + TÉLÉPHONE -->
+              <div class="contractor-step-pane" id="contractor-step-3" data-step="3">
+                <div>
+                  <div class="contractor-field-group">
+                    <label class="contractor-section-lbl">DÉBUT SOUHAITÉ</label>
+                    <div class="contractor-pills-wrap" id="sim-timing-pills">
+                      <button type="button" class="contractor-pill active" data-timing="Dès que possible">Dès que possible</button>
+                      <button type="button" class="contractor-pill" data-timing="Dans les 3 mois">Dans les 3 mois</button>
+                      <button type="button" class="contractor-pill" data-timing="Dans les 6 mois">Dans les 6 mois</button>
+                      <button type="button" class="contractor-pill" data-timing="Je me renseigne">Je me renseigne</button>
+                    </div>
+                  </div>
+
+                  <div class="contractor-field-group" style="margin-top: 18px;">
+                    <label class="contractor-section-lbl" for="sim-input-name">VOTRE NOM</label>
+                    <input type="text" id="sim-input-name" class="contractor-input-field" placeholder="Prénom et nom" />
+                  </div>
+
+                  <div class="contractor-field-group" style="margin-top: 18px;">
+                    <label class="contractor-section-lbl" for="sim-input-phone">VOTRE TÉLÉPHONE</label>
+                    <input type="tel" id="sim-input-phone" class="contractor-input-field" placeholder="+32 4.. .. .. .." />
+                  </div>
+
+                  <div style="margin-top: 10px; display: flex; justify-content: flex-end;">
+                    <button type="button" id="sim-quick-fill-btn" class="contractor-quickfill-link">⚡ Pré-remplir un exemple</button>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="contractor-nav-row">
+                    <button type="button" class="contractor-btn-back" data-goto-step="2">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                      <span>Retour</span>
+                    </button>
+                    <button type="button" class="contractor-btn-next" id="sim-submit-btn">
+                      <span>ENVOYER MA DEMANDE</span>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                  </div>
+                  <div class="contractor-footer-note">
+                    🔒 Vos coordonnées restent strictement confidentielles. Aucun démarchage abusif.
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 4 : CONFIRMATION SCREEN (FINITO) -->
+              <div class="contractor-step-pane" id="contractor-step-4" data-step="4">
+                <div class="contractor-finish-box">
+                  <div class="contractor-finish-icon">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <h4 class="contractor-finish-title">Demande transmise en 1,2 seconde !</h4>
+                  <p class="contractor-finish-sub">
+                    Votre récapitulatif officiel a bien été généré. À droite, observez la synchronisation immédiate sur votre téléphone et dans votre CRM.
+                  </p>
+                  <div class="contractor-finish-summary" id="contractor-finish-recap">
+                    <!-- Dynamic summary -->
+                  </div>
+                  <button type="button" id="wizard-restart-btn" class="contractor-btn-restart">
+                    ↺ Recommencer la simulation
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT PANEL : Realistic iPhone SMS Notification + Authentic Notion CRM Contact Card (Starts Empty/Pending) -->
+          <div class="right-sim-column">
+            <!-- 1. Realistic iPhone iOS Lock-Screen / Banner SMS Notification -->
+            <div class="iphone-sms-banner sms-pending" id="live-sms-toast">
+              <div class="ios-messages-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.477 3 2 6.805 2 11.5c0 2.133.93 4.084 2.473 5.582-.152 1.25-.672 2.454-1.356 3.297-.19.234-.007.584.29.546 1.622-.207 3.165-.808 4.28-1.454A11.33 11.33 0 0 0 12 20c5.523 0 10-3.805 10-8.5S17.523 3 12 3z"/></svg>
+              </div>
+              <div class="ios-sms-content">
+                <div class="ios-sms-top">
+                  <span class="ios-sms-appname" id="live-sms-appname">MESSAGES • EN ATTENTE DU FORMULAIRE</span>
+                  <span class="ios-sms-time" id="live-sms-time">en attente</span>
+                </div>
+                <div class="ios-sms-sender" id="live-sms-title">
+                  ⏳ En attente des réponses du prospect...
+                </div>
+                <div class="ios-sms-body" id="live-sms-summary">
+                  Répondez aux questions à gauche : le SMS d'alerte dirigeant se déclenchera dès la validation du formulaire.
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Authentic Notion CRM Contact Page (Starts Empty until user answers!) -->
+            <div class="notion-page-card" id="notion-crm-card">
+              <div class="notion-topbar">
+                <div class="notion-breadcrumbs">
+                  <span>📁 CRM Webely</span>
+                  <span class="crumb-sep">/</span>
+                  <span>📋 Pipeline Chantiers 2026</span>
+                  <span class="crumb-sep">/</span>
+                  <strong id="notion-crumb-name">Nouvelle fiche (En attente...)</strong>
+                </div>
+                <span style="letter-spacing: 2px; color: rgba(255,255,255,0.45);">•••</span>
+              </div>
+
+              <div class="notion-cover-strip"></div>
+
+              <div class="notion-body">
+                <div>
+                  <div class="notion-title-row">
+                    <div class="notion-page-icon" id="dossier-avatar">⏳</div>
+                    <div>
+                      <h4 class="notion-page-title is-placeholder" id="dossier-name">Nom du client en attente...</h4>
+                      <div class="notion-dossier-ref" id="dossier-ref-tag">Dossier #WEB-2026-849</div>
+                    </div>
+                  </div>
+
+                  <!-- Authentic Notion Database Properties (Matched to 3-Question Funnel) -->
+                  <div class="notion-props-table">
+                    <!-- Property 1 : Statut CRM (Interactive) -->
+                    <div class="notion-prop-row" id="notion-row-status">
+                      <div class="notion-prop-key">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+                        <span>Statut CRM</span>
+                      </div>
+                      <div class="notion-prop-val">
+                        <div class="notion-status-switcher" id="crm-stage-buttons">
+                          <button type="button" class="notion-status-btn active" data-stage="Nouveau lead">⏳ Saisie en cours...</button>
+                          <button type="button" class="notion-status-btn" data-stage="À rappeler (24h)">📞 À rappeler (24h)</button>
+                          <button type="button" class="notion-status-btn" data-stage="Visite planifiée">🗓 Visite planifiée</button>
+                          <button type="button" class="notion-status-btn signed" data-stage="Chantier signé ✓">Chantier signé ✓</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Property 2 : Téléphone GSM -->
+                    <div class="notion-prop-row" id="notion-row-phone">
+                      <div class="notion-prop-key">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>Téléphone GSM</span>
+                      </div>
+                      <div class="notion-prop-val" id="crm-val-phone">
+                        <span class="notion-empty-placeholder" id="crm-field-phone">— En attente (Étape 3)</span>
+                      </div>
+                    </div>
+
+                    <!-- Property 3 : Commune / Localisation -->
+                    <div class="notion-prop-row" id="notion-row-cp">
+                      <div class="notion-prop-key">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Commune</span>
+                      </div>
+                      <div class="notion-prop-val" id="crm-val-cp">
+                        <span class="notion-empty-placeholder" id="crm-field-cp">— En attente (Étape 2)</span>
+                      </div>
+                    </div>
+
+                    <!-- Property 4 : Métier(s) / Prestations -->
+                    <div class="notion-prop-row" id="notion-row-project">
+                      <div class="notion-prop-key">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        <span>Métier(s)</span>
+                      </div>
+                      <div class="notion-prop-val">
+                        <span class="notion-empty-placeholder" id="crm-field-project">— Choisissez à l'étape 1</span>
+                      </div>
+                    </div>
+
+                    <!-- Property 5 : Surface concernée -->
+                    <div class="notion-prop-row" id="notion-row-elig">
+                      <div class="notion-prop-key">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        <span>Surface</span>
+                      </div>
+                      <div class="notion-prop-val">
+                        <span class="notion-empty-placeholder" id="crm-field-elig">— Choisissez à l'étape 2</span>
+                      </div>
+                    </div>
+
+                    <!-- Property 6 : Délai d'intervention -->
+                    <div class="notion-prop-row" id="notion-row-budget">
+                      <div class="notion-prop-key">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>Délai souhaité</span>
+                      </div>
+                      <div class="notion-prop-val">
+                        <span class="notion-empty-placeholder" id="crm-field-budget">— Choisissez à l'étape 3</span>
+                      </div>
+                    </div>
+
+                    <!-- Property 7 : Source & Exclusivité -->
+                    <div class="notion-prop-row" id="notion-row-source">
+                      <div class="notion-prop-key">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        <span>Source</span>
+                      </div>
+                      <div class="notion-prop-val">
+                        <span class="notion-tag green">⚡ Site Webely (100% Exclusif)</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Realistic Notion Task Checklist (Suivi Chantier) -->
+                  <div class="notion-tasks-section">
+                    <div class="notion-tasks-header">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                      <span>PLAN D'ACTION SUIVI CHANTIER</span>
+                    </div>
+                    <div class="notion-checklist">
+                      <div class="notion-todo-item done" id="notion-task-sms">
+                        <span class="notion-checkbox">✓</span>
+                        <span>Notification transmise instantanément sur le téléphone</span>
+                      </div>
+                      <div class="notion-todo-item" id="notion-task-call">
+                        <span class="notion-checkbox">☐</span>
+                        <span>Rappel client sous 24h ouvrées pour qualifier les spécificités</span>
+                      </div>
+                      <div class="notion-todo-item" id="notion-task-visit">
+                        <span class="notion-checkbox">☐</span>
+                        <span>Planifier la visite technique d'estimation offerte sur place</span>
+                      </div>
+                      <div class="notion-todo-item" id="notion-task-quote">
+                        <span class="notion-checkbox">☐</span>
+                        <span>Chiffrage métré et envoi du devis sous 48h</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Notion Bottom Callout -->
+                <div class="notion-callout">
+                  <span class="notion-callout-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <div class="notion-callout-text" id="live-email-confirmation">
+                    En attente : remplissez le simulateur à gauche pour voir la fiche CRM et l'alerte téléphone se synchroniser en direct.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4 : OFFRE UNIQUE CLÉ EN MAIN (RESTORED FROM V4.5, NO CONTRACT/TVA)
+         ====================================================================== -->
+    <section id="tarifs" class="section">
+      <div class="container">
+        <div class="section-head-split">
+          <div class="section-head-left">
+            <h2 class="section-title">Une structure claire, transparente et sans surprise.</h2>
+          </div>
+          <p class="section-subtitle">
+            Une offre unique réunissant l'installation complète de votre infrastructure et le pilotage mensuel de votre acquisition.
+          </p>
+        </div>
+
+        <div class="offer-ledger-grid">
+          <!-- LEFT COLUMN : Investment Structure -->
+          <div class="offer-investment-card">
+            <span class="offer-card-tag">Webely Acquisition System™</span>
+            <h3 class="offer-card-title">Offre Complète Clé en Main</h3>
+            <p class="offer-card-sub">
+              Déploiement intégral en 14 jours ouvrés + gestion mensuelle des campagnes, du CRM et maintenance technique.
+            </p>
+
+            <div class="price-blocks-stack">
+              <!-- Setup -->
+              <div class="price-block-item">
+                <div>
+                  <div class="price-block-label">PHASE 01 • INSTALLATION COMPLÈTE</div>
+                  <div class="price-block-title">Déploiement de l'Infrastructure</div>
+                  <div class="price-block-note">Livré clé en main en 14 jours ouvrés</div>
+                </div>
+                <div class="price-block-figure">
+                  <div class="price-figure-main">1 990 € <span style="font-size: 15px; font-weight: 600; color: var(--text-secondary);">HT</span></div>
+                  <div class="price-figure-unit">Paiement unique</div>
+                </div>
+              </div>
+
+              <!-- Monthly -->
+              <div class="price-block-item recurring">
+                <div>
+                  <div class="price-block-label">PHASE 02 • GESTION &amp; ACCOMPAGNEMENT</div>
+                  <div class="price-block-title">Pilotage Meta Ads, CRM &amp; Support</div>
+                  <div class="price-block-note">Engagement initial de 3 mois • Puis mensuel</div>
+                </div>
+                <div class="price-block-figure">
+                  <div class="price-figure-main">490 € <span style="font-size: 15px; font-weight: 600; color: var(--text-secondary);">HT</span></div>
+                  <div class="price-figure-unit">Par mois</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="media-budget-box" style="margin-bottom: 24px;">
+              <strong>Budget publicitaire séparé : 600 à 1 000 € / mois</strong>
+              Payé directement par votre entreprise à Meta (Facebook/Instagram). Budget indicatif adapté à votre secteur et vos communes d'intervention (0% de commission Webely).
+            </div>
+
+            <a href="#" class="btn btn-primary btn-lg trigger-audit-modal" style="width: 100%;">
+              <span>Réserver mon appel de 10 min (Sans engagement)</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- RIGHT COLUMN : Complete Deliverables Ledger -->
+          <div class="deliverables-stack">
+            <!-- Module 1 : Setup Deliverables -->
+            <div class="deliverable-module">
+              <div class="module-header">
+                <h4 class="module-title">Compris dans l'installation (1 990 € HT)</h4>
+                <span class="module-count">10 LIVRABLES INCLUS</span>
+              </div>
+              <div class="deliverables-grid">
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Création d'une landing page personnalisée</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Simulateur d'éligibilité &amp; devis qualifiant</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Configuration complète de votre espace CRM</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Structuration du pipeline commercial</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Connexion automatisée formulaire → CRM</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Confirmation automatique par email au prospect</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Notification interne SMS/Email des nouveaux leads</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Configuration initiale Meta Ads (Facebook/Instagram)</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Installation et vérification du tracking (Pixel/CAPI)</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Guide explicatif simple pour une prise en main rapide</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Module 2 : Monthly Deliverables -->
+            <div class="deliverable-module">
+              <div class="module-header">
+                <h4 class="module-title">Compris chaque mois (490 € HT / mois)</h4>
+                <span class="module-count">8 SERVICES CONTINUS</span>
+              </div>
+              <div class="deliverables-grid">
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Gestion continue des campagnes Meta Ads</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Optimisation des audiences et du ciblage local</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Création de 3 à 5 variations publicitaires par mois</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Suivi régulier des performances et du coût par lead</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Rapport mensuel synthétique de performance</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Hébergement haute vitesse et maintenance de la page</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Surveillance 24/7 des formulaires et automatisations</span>
+                </div>
+                <div class="deliverable-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Support technique réactif dédié au dirigeant</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5 : CALCULATEUR DE RENTABILITÉ & COMPARATIF (RESTORED FROM V4.5)
+         ====================================================================== -->
+    <section id="calculateur" class="section section-bordered">
+      <div class="container">
+        <div class="section-head-split">
+          <div class="section-head-left">
+            <h2 class="section-title">Un seul chantier signé amortit votre investissement.</h2>
+          </div>
+          <p class="section-subtitle">
+            Ajustez les curseurs selon votre panier moyen et votre marge brute pour calculer votre seuil de rentabilité exact sur un trimestre.
+          </p>
+        </div>
+
+        <div class="calculator-wrapper">
+          <div class="calc-controls">
+            <div class="calc-control-group">
+              <div class="calc-label-row">
+                <label for="calc-ticket">Valeur moyenne d'un chantier signé</label>
+                <span class="calc-val-display" id="display-ticket">12 500 €</span>
+              </div>
+              <input type="range" id="calc-ticket" min="3500" max="60000" step="500" value="12500" />
+            </div>
+
+            <div class="calc-control-group">
+              <div class="calc-label-row">
+                <label for="calc-margin">Votre marge brute moyenne sur chantier (%)</label>
+                <span class="calc-val-display" id="display-margin">40 %</span>
+              </div>
+              <input type="range" id="calc-margin" min="20" max="65" step="1" value="40" />
+            </div>
+
+            <div class="calc-control-group">
+              <div class="calc-label-row">
+                <label for="calc-media">Budget publicitaire Meta Ads mensuel (Payé à Meta)</label>
+                <span class="calc-val-display" id="display-media">600 €</span>
+              </div>
+              <input type="range" id="calc-media" min="400" max="2000" step="50" value="600" />
+            </div>
+          </div>
+
+          <div class="calc-result-box">
+            <div class="calc-result-label">Seuil de rentabilité sur 3 mois complets</div>
+            <div class="calc-result-main" id="calc-result-jobs">1.1 chantier</div>
+            <div class="calc-result-sub" id="calc-net-profit">
+              + 4 740 € de marge nette estimée dès 2 chantiers signés sur le trimestre !
+            </div>
+
+            <div class="calc-breakdown">
+              <div class="calc-row">
+                <span>Marge brute dégagée par chantier signé :</span>
+                <strong id="calc-row-margin-unit" style="color: var(--emerald);">+ 5 000 €</strong>
+              </div>
+              <div class="calc-row">
+                <span>Gestion Webely (490 €) + Budget Meta Ads :</span>
+                <strong id="calc-row-monthly-spend">1 090 € HT / mois</strong>
+              </div>
+              <div class="calc-row">
+                <span>Investissement total sur 3 mois (Installation incluse) :</span>
+                <strong id="calc-row-quarter-invest">5 260 € HT</strong>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn-primary btn-lg trigger-audit-modal" style="width: 100%; margin-top: 24px;">
+              <span>Valider ces projections en 10 min</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3-COLUMN STRATEGIC COMPARISON -->
+        <div class="comparison-cards-grid">
+          <div class="comparison-card highlight">
+            <div class="comparison-card-head">
+              <div class="comparison-title">
+                <span class="webely-logo">
+                  <span class="webely-logo-word">webely</span><span class="webely-logo-dot"></span>
+                </span>
+              </div>
+              <div class="comparison-sub">Infrastructure complète &amp; exclusive (490 € HT/mois)</div>
+            </div>
+            <ul class="comparison-list">
+              <li>
+                <span class="comp-mark yes">✓</span>
+                <span><strong>100% Exclusif :</strong> chaque demande de devis est générée sous votre nom et n'est envoyée qu'à votre entreprise.</span>
+              </li>
+              <li>
+                <span class="comp-mark yes">✓</span>
+                <span><strong>4 Composants réunis :</strong> Landing page + Simulateur d'éligibilité + CRM Notion + Meta Ads dans une offre unique.</span>
+              </li>
+              <li>
+                <span class="comp-mark yes">✓</span>
+                <span><strong>Propriété totale :</strong> votre page et votre base de données prospects vous appartiennent à 100 %.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="comparison-card">
+            <div class="comparison-card-head">
+              <div class="comparison-title">Prestataires Fragmentés</div>
+              <div class="comparison-sub">Addition de services séparés</div>
+            </div>
+            <ul class="comparison-list">
+              <li>
+                <span class="comp-mark no">✕</span>
+                <span><strong>Factures cumulées :</strong> Site seul (dès 1 500 €) + CRM (150 €/mois) + Agence pub (500 à 800 €/mois).</span>
+              </li>
+              <li>
+                <span class="comp-mark no">✕</span>
+                <span><strong>Outils déconnectés :</strong> aucune synchronisation native entre la publicité, le filtrage et votre suivi commercial.</span>
+              </li>
+              <li>
+                <span class="comp-mark no">✕</span>
+                <span><strong>Délais longs :</strong> souvent 2 à 3 mois d'attente avant de recevoir la moindre demande de devis.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="comparison-card">
+            <div class="comparison-card-head">
+              <div class="comparison-title">Plateformes de Leads</div>
+              <div class="comparison-sub">Achat de contacts partagés (Bobex, Quotatis...)</div>
+            </div>
+            <ul class="comparison-list">
+              <li>
+                <span class="comp-mark no">✕</span>
+                <span><strong>Vendu à 5 concurrents :</strong> guerre des prix systématique où le client choisit le devis le moins cher.</span>
+              </li>
+              <li>
+                <span class="comp-mark no">✕</span>
+                <span><strong>Aucun actif durable :</strong> dès que vous arrêtez de payer au contact, vous n'avez plus aucune visibilité.</span>
+              </li>
+              <li>
+                <span class="comp-mark no">✕</span>
+                <span><strong>Qualification faible :</strong> forte proportion de curieux ou de demandes sans budget réel.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6 : ROADMAP 14 JOURS, FAQ UTILE & APPEL 10 MIN (RESTORED V4.5)
+         ====================================================================== -->
+    <section id="processus" class="section">
+      <div class="container">
+        <div class="section-head-split">
+          <div class="section-head-left">
+            <h2 class="section-title">De la validation au lancement en 2 semaines.</h2>
+          </div>
+          <p class="section-subtitle">
+            Nous prenons en charge 95% de la mise en place technique et créative pour ne pas mobiliser votre temps sur chantier.
+          </p>
+        </div>
+
+        <div class="roadmap-grid">
+          <div class="roadmap-card">
+            <span class="roadmap-step">JOURS 1 À 3</span>
+            <h3 class="roadmap-title">1. Cadrage &amp; Stratégie</h3>
+            <p class="roadmap-desc">Définition de vos chantiers les plus rentables, de vos communes d'intervention et collecte des photos de vos réalisations.</p>
+          </div>
+          <div class="roadmap-card">
+            <span class="roadmap-step">JOURS 4 À 8</span>
+            <h3 class="roadmap-title">2. Landing Page &amp; Simulateur</h3>
+            <p class="roadmap-desc">Création sur mesure de votre page de conversion et intégration du simulateur d'éligibilité et de devis.</p>
+          </div>
+          <div class="roadmap-card">
+            <span class="roadmap-step">JOURS 9 À 11</span>
+            <h3 class="roadmap-title">3. CRM Notion &amp; Publicités</h3>
+            <p class="roadmap-desc">Configuration de votre espace CRM, des alertes SMS iPhone instantanées, du tracking Pixel/CAPI et des visuels Meta Ads.</p>
+          </div>
+          <div class="roadmap-card">
+            <span class="roadmap-step">JOURS 12 À 14</span>
+            <h3 class="roadmap-title">4. Guide &amp; Mise en Ligne</h3>
+            <p class="roadmap-desc">Remise de votre guide explicatif rapide pour le suivi CRM, validation finale et lancement des campagnes.</p>
+          </div>
+        </div>
+
+        <!-- FAQ UTILE & CONCRÈTE POUR LE CLIENT -->
+        <div id="faq" class="section-head-split" style="margin-bottom: 40px;">
+          <div class="section-head-left">
+            <span class="eyebrow-tag">Questions Fréquentes</span>
+            <h2 class="section-title">Les réponses aux questions des dirigeants du bâtiment.</h2>
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <button type="button" class="faq-question">
+              <span>Quelle est la différence entre Webely et les plateformes qui vendent des leads (Bobex, Quotatis, etc.) ?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              Sur une plateforme d'achat de leads, la même demande est vendue simultanément à 4 ou 5 entreprises concurrentes : vous êtes forcé de casser vos prix pour espérer signer. Avec Webely, nous construisons votre propre système sous votre nom : chaque propriétaire qui remplit votre simulateur s'adresse uniquement à votre entreprise.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Comment évitez-vous de m'envoyer des curieux ou des petits dépannages sans budget ?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              Nous n'utilisons jamais un simple formulaire « Nom / Téléphone ». Le propriétaire passe par un simulateur précis (type d'installation, ancienneté du logement pour les primes et la TVA à 6 %, enveloppe budgétaire, délai et commune). Les demandes hors critères sont naturellement écartées avant d'arriver sur votre téléphone.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Je suis sur chantier toute la journée : est-ce simple à utiliser au quotidien ?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              Oui, tout est pensé pour le terrain. Dès qu'un dossier qualifié est validé, vous recevez un SMS clair sur votre téléphone avec toutes les informations et le numéro du client à rappeler en un clic. Toutes vos fiches prospects sont rangées automatiquement dans une interface Notion très simple, accompagnée d'un guide explicatif rapide.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Dois-je déjà avoir un site internet ou rédiger des textes moi-même ?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              Pas du tout. Que vous ayez déjà un site vitrine ou aucun site, notre équipe conçoit de A à Z votre landing page dédiée, votre simulateur interactif ainsi que vos visuels et textes publicitaires en 14 jours.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Que m'appartient-il si je décide d'arrêter l'accompagnement mensuel par la suite ?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              Contrairement aux agences qui vous louent un site et coupent tout en fin de collaboration, vous conservez 100 % de la propriété de votre page de conversion, de votre espace CRM et de l'intégralité des prospects générés.
+            </div>
+          </div>
+        </div>
+
+        <!-- Final Callout (Restored V4.5 style, without personal name) -->
+        <div class="final-cta-card">
+          <span class="eyebrow-tag" style="justify-content: center;">Appel Découverte • 10 Minutes • Sans Engagement</span>
+          <h2 class="final-cta-title">Prêt à recevoir des demandes de chantiers qualifiées et 100 % exclusives ?</h2>
+          <p class="final-cta-desc">
+            En 10 minutes par téléphone avec notre équipe, nous analysons votre secteur d'activité et vous montrons concrètement comment déployer ce système pour votre entreprise.
+          </p>
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+            <a href="#" class="btn btn-primary btn-lg trigger-audit-modal">
+              <span>Réserver mon appel de 10 min</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER (CLEAN AGENCY STRUCTURE — ZERO CONTRACT OR PERSONAL INFO)
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" aria-label="Webely">
+            <span class="webely-logo">
+              <span class="webely-logo-word">webely</span><span class="webely-logo-dot"></span>
+            </span>
+          </a>
+          <p>
+            Systèmes d'acquisition et de qualification de chantiers clé en main pour les entreprises du bâtiment, de la rénovation et des métiers techniques.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Architecture</h4>
+          <ul class="footer-links">
+            <li><a href="#systeme">Les 4 Composants</a></li>
+            <li><a href="#demonstration">Simulateur Temps Réel</a></li>
+            <li><a href="#tarifs">Offre &amp; Tarif</a></li>
+            <li><a href="#calculateur">Calculateur de ROI</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Secteurs Accompagnés</h4>
+          <ul class="footer-links">
+            <li><a href="#demonstration">Pompes à Chaleur &amp; HVAC</a></li>
+            <li><a href="#demonstration">Rénovation Générale</a></li>
+            <li><a href="#demonstration">Toiture &amp; Isolation</a></li>
+            <li><a href="#demonstration">Électricité &amp; Solaire</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Découverte</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contact@webely.eu">contact@webely.eu</a></li>
+            <li><a href="#" class="trigger-audit-modal" style="color: var(--mauve-bright); font-weight: 700;">Réserver un appel de 10 min →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 webely. Tous droits réservés.</span>
+        <span>Systèmes d'Acquisition Client B2B • Belgique</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       STICKY FLOATING CTA BAR
+       ======================================================================== -->
+  <div id="floating-cta-bar" class="floating-cta-bar" role="region" aria-label="Appel découverte">
+    <div class="floating-cta-inner">
+      <div class="floating-cta-info">
+        <span class="live-dot"></span>
+        <span><strong>Appel rapide 10 min :</strong> Découvrez comment ce système s'adapte à votre entreprise (Sans engagement)</span>
+      </div>
+      <div class="header-actions">
+        <a href="#" class="btn btn-primary trigger-audit-modal" style="padding: 9px 18px; font-size: 12.5px;">
+          <span>Réserver mon appel (10 min)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL : 10-MINUTE DISCOVERY CALL
+       ======================================================================== -->
+  <div id="audit-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button type="button" id="modal-close-btn" class="modal-close" aria-label="Fermer">✕</button>
+      <span class="eyebrow-tag" style="margin-bottom: 8px;">10 Minutes • Sans Engagement</span>
+      <h3 id="modal-title" style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: #ffffff; margin-bottom: 8px;">Réserver mon appel découverte</h3>
+      <p style="font-size: 13.5px; color: var(--text-secondary); margin-bottom: 20px;">
+        Laissez vos coordonnées : notre équipe vous rappelle rapidement pour vous montrer comment déployer ce système pour votre entreprise.
+      </p>
+
+      <form id="modal-audit-form">
+        <div>
+          <label class="field-label" for="modal-company">Entreprise &amp; Métier</label>
+          <input type="text" id="modal-company" class="input-field" placeholder="Ex: Dupont HVAC — Chauffagiste" required />
+        </div>
+        <div>
+          <label class="field-label" for="modal-cp">Code postal &amp; Commune</label>
+          <input type="text" id="modal-cp" class="input-field" placeholder="Ex: 1410 Waterloo" required />
+        </div>
+        <div>
+          <label class="field-label" for="modal-phone">Votre GSM direct</label>
+          <input type="tel" id="modal-phone" class="input-field" placeholder="+32 470 00 00 00" required />
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 6px;">
+          <span>Demander mon appel de 10 min</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js?v=8.0"></script>
+</body>
+</html>

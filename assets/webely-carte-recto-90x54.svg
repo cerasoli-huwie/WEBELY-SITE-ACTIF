@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 648" width="90mm" height="54mm">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&amp;display=swap');
+      .bg { fill: #08080a; }
+      
+      .brand-mirror {
+        font-family: 'Syne', -apple-system, sans-serif;
+        font-size: 142px;
+        font-weight: 800;
+        letter-spacing: -0.05em;
+        fill: url(#liquidMirrorGrad);
+      }
+      .dot-mirror {
+        fill: url(#dotGlowGrad);
+      }
+      .crop-mark {
+        stroke: rgba(255, 255, 255, 0.22);
+        stroke-width: 0.75;
+        fill: none;
+      }
+    </style>
+
+    <!-- Dégradé Effet Miroir Argenté & Transparence Verre Liquide (Specular Chrome Sheen) -->
+    <linearGradient id="liquidMirrorGrad" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="26%" stop-color="#ffffff" />
+      <stop offset="38%" stop-color="#dedae8" />
+      <stop offset="47%" stop-color="#848096" stop-opacity="0.88" />
+      <stop offset="52%" stop-color="#ffffff" />
+      <stop offset="56%" stop-color="#ffffff" />
+      <stop offset="72%" stop-color="#a4a0b6" />
+      <stop offset="100%" stop-color="#444054" stop-opacity="0.75" />
+    </linearGradient>
+
+    <!-- Point Signature Fuchsia Effet Gemme Brillante -->
+    <radialGradient id="dotGlowGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffa8ed" />
+      <stop offset="45%" stop-color="#ff4fd8" />
+      <stop offset="100%" stop-color="#b40e87" />
+    </radialGradient>
+
+    <!-- Aura de Verre Fumé Ambiante (Douce lueur de profondeur) -->
+    <radialGradient id="subtleAura" cx="50%" cy="50%" r="48%">
+      <stop offset="0%" stop-color="#7c5cff" stop-opacity="0.08" />
+      <stop offset="35%" stop-color="#ff4fd8" stop-opacity="0.04" />
+      <stop offset="70%" stop-color="#08080a" stop-opacity="0.0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Fond Noir Veloute et Profond (Format exact fabricant 90x54mm) -->
+  <rect width="1080" height="648" class="bg" />
+  <rect width="1080" height="648" fill="url(#subtleAura)" />
+
+  <!-- Logo Rigoureusement Centré Optiquement (Milieu exact à X: 540, Y: 324) -->
+  <g transform="translate(547, 358)" text-anchor="middle">
+    <text class="brand-mirror" x="0" y="0">webely<tspan class="dot-mirror">.</tspan></text>
+  </g>
+
+  <!-- Reperes de Repérage Fabricant (Format 90x54mm) -->
+  <path d="M 24,8 L 24,24 L 8,24" class="crop-mark" />
+  <path d="M 1056,8 L 1056,24 L 1072,24" class="crop-mark" />
+  <path d="M 24,640 L 24,624 L 8,624" class="crop-mark" />
+  <path d="M 1056,640 L 1056,624 L 1072,624" class="crop-mark" />
+</svg>

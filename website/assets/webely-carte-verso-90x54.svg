@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 648" width="90mm" height="54mm">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Allura&amp;family=Pinyon+Script&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap');
+      .bg { fill: #08080a; }
+      
+      /* Typographie Colonne Gauche */
+      .qr-tag {
+        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+        fill: #78788a;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+
+      /* Logo Style Signature Calligraphique (En dessous du QR Code) */
+      .brand-signature {
+        font-family: 'Allura', 'Pinyon Script', cursive;
+        font-size: 54px;
+        font-weight: 400;
+        fill: #ffffff;
+        letter-spacing: 1px;
+      }
+      .signature-dot {
+        fill: #ff4fd8;
+      }
+      .signature-sub {
+        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+        font-size: 9.5px;
+        font-weight: 700;
+        fill: #686878;
+        letter-spacing: 3.5px;
+        text-transform: uppercase;
+      }
+
+      /* Typographie Colonne Droite */
+      .name {
+        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+        font-size: 38px;
+        font-weight: 800;
+        fill: #ffffff;
+        letter-spacing: -0.8px;
+      }
+      
+      /* Compétences */
+      .role {
+        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+        font-size: 12.5px;
+        font-weight: 700;
+        fill: #ff4fd8;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+      }
+
+      /* Liste de Contacts */
+      .contact-text {
+        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+        font-size: 19.5px;
+        font-weight: 600;
+        fill: #ffffff;
+        letter-spacing: -0.2px;
+      }
+      .contact-text-bold {
+        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        fill: #ffffff;
+        letter-spacing: -0.2px;
+      }
+      .contact-text-muted {
+        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+        font-size: 18.5px;
+        font-weight: 500;
+        fill: #a8a8b8;
+        letter-spacing: -0.2px;
+      }
+
+      /* Icones Vectorielles Precises */
+      .icon-stroke {
+        stroke: #c2c2d1;
+        stroke-width: 2;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      /* Footer Epure (TVA Agrandie : 15px) */
+      .vat-footer {
+        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+        font-size: 14.5px;
+        font-weight: 600;
+        fill: #787888;
+        letter-spacing: 1px;
+      }
+
+      .divider-line {
+        stroke: rgba(255, 255, 255, 0.14);
+        stroke-width: 1.2;
+      }
+
+      .crop-mark {
+        stroke: rgba(255, 255, 255, 0.22);
+        stroke-width: 0.75;
+        fill: none;
+      }
+    </style>
+
+    <!-- Paraphe Dégradé Fuchsia Signature -->
+    <linearGradient id="swashGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c5cff" stop-opacity="0.3" />
+      <stop offset="45%" stop-color="#ff4fd8" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#ff4fd8" stop-opacity="0.0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fond Noir Veloute et Profond (Format exact fabricant 90x54mm) -->
+  <rect width="1080" height="648" class="bg" />
+
+  <!-- ==============================================
+       COLONNE GAUCHE : QR CODE EN HAUT & LOGO SIGNATURE EN DESSOUS
+       Centree sur l'axe X = 275
+       ============================================== -->
+  
+  <!-- En-tête discret du QR Code -->
+  <g transform="translate(275, 110)" text-anchor="middle">
+    <text class="qr-tag" x="0" y="0">PORTFOLIO · SCAN DIRECT</text>
+  </g>
+
+  <!-- QR Code Sombre Stylisé (Positionné en haut, Y = 138) -->
+<g id="stylish-qr" transform="translate(191, 138)">
+  <!-- Boîtier Écrin Sombre Velouté (Intégration Parfaite Zéro Bloc Blanc) -->
+  <rect width="168" height="168" rx="20" fill="#0d0c13" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2" />
+  <rect x="4" y="4" width="160" height="160" rx="16" fill="none" stroke="rgba(255, 79, 216, 0.08)" stroke-width="1" />
+  <path d="M 6,19 L 6,6 L 19,6" fill="none" stroke="#ff4fd8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 149,6 L 162,6 L 162,19" fill="none" stroke="#ff4fd8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 6,149 L 6,162 L 19,162" fill="none" stroke="#ff4fd8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 149,162 L 162,162 L 162,149" fill="none" stroke="#ff4fd8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="15.8" y="15.8" width="44.4" height="44.4" rx="7.5" fill="none" stroke="#ffffff" stroke-width="2.2" />
+  <rect x="28.1" y="28.1" width="19.7" height="19.7" rx="4" fill="#ff4fd8" />
+  <rect x="107.8" y="15.8" width="44.4" height="44.4" rx="7.5" fill="none" stroke="#ffffff" stroke-width="2.2" />
+  <rect x="120.1" y="28.1" width="19.7" height="19.7" rx="4" fill="#ff4fd8" />
+  <rect x="15.8" y="107.8" width="44.4" height="44.4" rx="7.5" fill="none" stroke="#ffffff" stroke-width="2.2" />
+  <rect x="28.1" y="120.1" width="19.7" height="19.7" rx="4" fill="#ff4fd8" />
+  <circle cx="136.6" cy="130.0" r="2.9" fill="#ffffff" />
+  <circle cx="44.6" cy="77.4" r="2.9" fill="#ffffff" />
+  <circle cx="130.0" cy="97.1" r="2.9" fill="#ffffff" />
+  <circle cx="143.1" cy="77.4" r="2.9" fill="#ffffff" />
+  <circle cx="84.0" cy="57.7" r="2.9" fill="#ffffff" />
+  <circle cx="77.4" cy="70.9" r="2.9" fill="#ffffff" />
+  <circle cx="70.9" cy="136.6" r="2.9" fill="#ffffff" />
+  <circle cx="77.4" cy="130.0" r="2.9" fill="#ffffff" />
+  <circle cx="31.4" cy="90.6" r="2.9" fill="#ffffff" />
+  <circle cx="90.6" cy="110.3" r="2.9" fill="#ffffff" />
+  <circle cx="103.7" cy="70.9" r="2.9" fill="#ffffff" />
+  <circle cx="103.7" cy="130.0" r="2.9" fill="#ffffff" />
+  <circle cx="116.9" cy="110.3" r="2.9" fill="#ffffff" />
+  <circle cx="123.4" cy="103.7" r="2.9" fill="#ffffff" />
+  <circle cx="136.6" cy="84.0" r="2.9" fill="#ffffff" />
+  <circle cx="136.6" cy="143.1" r="2.9" fill="#ffffff" />
+  <circle cx="97.1" cy="136.6" r="2.9" fill="#ffffff" />
+  <circle cx="70.9" cy="90.6" r="2.9" fill="#ffffff" />
+  <circle cx="90.6" cy="64.3" r="2.9" fill="#ffffff" />
+  <circle cx="77.4" cy="143.1" r="2.9" fill="#ffffff" />
+  <circle cx="90.6" cy="123.4" r="2.9" fill="#ffffff" />
+  <circle cx="24.9" cy="70.9" r="2.9" fill="#ffffff" />
+  <circle cx="103.7" cy="84.0" r="2.9" fill="#ffffff" />
+  <circle cx="103.7" cy="143.1" r="2.9" fill="#ffffff" />
+  <circle cx="116.9" cy="123.4" r="2.9" fill="#ffffff" />
+  <circle cx="84.0" cy="149.7" r="2.9" fill="#ffffff" />
+  <circle cx="123.4" cy="116.9" r="2.9" fill="#ffffff" />
+  <circle cx="64.3" cy="97.1" r="2.9" fill="#ffffff" />
+  <circle cx="38.0" cy="70.9" r="2.9" fill="#ffffff" />
+  <circle cx="97.1" cy="149.7" r="2.9" fill="#ffffff" />
+  <circle cx="130.0" cy="123.4" r="2.9" fill="#ffffff" />
+  <circle cx="18.3" cy="77.4" r="2.9" fill="#ffffff" />
+  <circle cx="90.6" cy="77.4" r="2.9" fill="#ffffff" />
+  <circle cx="24.9" cy="84.0" r="2.9" fill="#ffffff" />
+  <circle cx="116.9" cy="77.4" r="2.9" fill="#ffffff" />
+  <circle cx="103.7" cy="97.1" r="2.9" fill="#ffffff" />
+  <circle cx="116.9" cy="136.6" r="2.9" fill="#ffffff" />
+  <circle cx="123.4" cy="130.0" r="2.9" fill="#ffffff" />
+  <circle cx="136.6" cy="110.3" r="2.9" fill="#ffffff" />
+  <circle cx="38.0" cy="84.0" r="2.9" fill="#ffffff" />
+  <circle cx="130.0" cy="77.4" r="2.9" fill="#ffffff" />
+  <circle cx="110.3" cy="84.0" r="2.9" fill="#ffffff" />
+  <circle cx="77.4" cy="110.3" r="2.9" fill="#ffffff" />
+  <circle cx="24.9" cy="97.1" r="2.9" fill="#ffffff" />
+  <circle cx="103.7" cy="110.3" r="2.9" fill="#ffffff" />
+  <circle cx="123.4" cy="143.1" r="2.9" fill="#ffffff" />
+  <circle cx="97.1" cy="57.7" r="2.9" fill="#ffffff" />
+  <circle cx="97.1" cy="116.9" r="2.9" fill="#ffffff" />
+  <circle cx="38.0" cy="97.1" r="2.9" fill="#ffffff" />
+  <circle cx="130.0" cy="90.6" r="2.9" fill="#ffffff" />
+  <circle cx="110.3" cy="97.1" r="2.9" fill="#ffffff" />
+  <circle cx="77.4" cy="64.3" r="2.9" fill="#ffffff" />
+  <circle cx="77.4" cy="123.4" r="2.9" fill="#ffffff" />
+  <circle cx="116.9" cy="103.7" r="2.9" fill="#ffffff" />
+  <circle cx="84.0" cy="130.0" r="2.9" fill="#ffffff" />
+  <circle cx="123.4" cy="97.1" r="2.9" fill="#ffffff" />
+  <circle cx="136.6" cy="77.4" r="2.9" fill="#ffffff" />
+  <circle cx="70.9" cy="149.7" r="2.9" fill="#ffffff" />
+  <circle cx="143.1" cy="149.7" r="2.9" fill="#ffffff" />
+  <circle cx="136.6" cy="136.6" r="2.9" fill="#ffffff" />
+  <circle cx="149.7" cy="97.1" r="2.9" fill="#ffffff" />
+  <circle cx="110.3" cy="110.3" r="2.9" fill="#ffffff" />
+  <circle cx="70.9" cy="103.7" r="2.9" fill="#ffffff" />
+  <circle cx="84.0" cy="84.0" r="2.9" fill="#ffffff" />
+  <circle cx="103.7" cy="77.4" r="2.9" fill="#ffffff" />
+  <circle cx="103.7" cy="136.6" r="2.9" fill="#ffffff" />
+  <circle cx="90.6" cy="136.6" r="2.9" fill="#ffffff" />
+  <circle cx="84.0" cy="143.1" r="2.9" fill="#ffffff" />
+  <circle cx="136.6" cy="90.6" r="2.9" fill="#ffffff" />
+  <circle cx="97.1" cy="24.9" r="2.9" fill="#ffffff" />
+  <circle cx="97.1" cy="84.0" r="2.9" fill="#ffffff" />
+  <circle cx="110.3" cy="123.4" r="2.9" fill="#ffffff" />
+  <circle cx="70.9" cy="57.7" r="2.9" fill="#ffffff" />
+  <circle cx="84.0" cy="38.0" r="2.9" fill="#ffffff" />
+  <circle cx="143.1" cy="116.9" r="2.9" fill="#ffffff" />
+  <circle cx="24.9" cy="77.4" r="2.9" fill="#ffffff" />
+  <circle cx="18.3" cy="90.6" r="2.9" fill="#ffffff" />
+  <circle cx="31.4" cy="70.9" r="2.9" fill="#ffffff" />
+  <circle cx="103.7" cy="90.6" r="2.9" fill="#ffffff" />
+  <circle cx="123.4" cy="123.4" r="2.9" fill="#ffffff" />
+  <circle cx="57.7" cy="70.9" r="2.9" fill="#ffffff" />
+  <circle cx="116.9" cy="149.7" r="2.9" fill="#ffffff" />
+  <circle cx="110.3" cy="77.4" r="2.9" fill="#ffffff" />
+  <circle cx="44.6" cy="70.9" r="2.9" fill="#ffffff" />
+  <circle cx="70.9" cy="70.9" r="2.9" fill="#ffffff" />
+  <circle cx="143.1" cy="70.9" r="2.9" fill="#ffffff" />
+  <circle cx="130.0" cy="149.7" r="2.9" fill="#ffffff" />
+  <circle cx="70.9" cy="130.0" r="2.9" fill="#ffffff" />
+  <circle cx="143.1" cy="130.0" r="2.9" fill="#ffffff" />
+  <circle cx="123.4" cy="77.4" r="2.9" fill="#ffffff" />
+  <circle cx="57.7" cy="84.0" r="2.9" fill="#ffffff" />
+  <circle cx="149.7" cy="77.4" r="2.9" fill="#ffffff" />
+  <circle cx="97.1" cy="51.1" r="2.9" fill="#ffffff" />
+  <circle cx="97.1" cy="110.3" r="2.9" fill="#ffffff" />
+  <circle cx="38.0" cy="90.6" r="2.9" fill="#ffffff" />
+  <circle cx="70.9" cy="24.9" r="2.9" fill="#ffffff" />
+  <circle cx="130.0" cy="103.7" r="2.9" fill="#ffffff" />
+  <circle cx="143.1" cy="84.0" r="2.9" fill="#ffffff" />
+  <circle cx="70.9" cy="143.1" r="2.9" fill="#ffffff" />
+  <circle cx="90.6" cy="116.9" r="2.9" fill="#ffffff" />
+  <circle cx="116.9" cy="116.9" r="2.9" fill="#ffffff" />
+  <circle cx="57.7" cy="97.1" r="2.9" fill="#ffffff" />
+  <circle cx="97.1" cy="64.3" r="2.9" fill="#ffffff" />
+  <circle cx="97.1" cy="123.4" r="2.9" fill="#ffffff" />
+  <circle cx="44.6" cy="97.1" r="2.9" fill="#ffffff" />
+  <circle cx="70.9" cy="38.0" r="2.9" fill="#ffffff" />
+  <circle cx="130.0" cy="116.9" r="2.9" fill="#ffffff" />
+  <circle cx="70.9" cy="97.1" r="2.9" fill="#ffffff" />
+  <circle cx="18.3" cy="70.9" r="2.9" fill="#ffffff" />
+  <circle cx="77.4" cy="90.6" r="2.9" fill="#ffffff" />
+  <circle cx="77.4" cy="149.7" r="2.9" fill="#ffffff" />
+  <circle cx="116.9" cy="70.9" r="2.9" fill="#ffffff" />
+  <circle cx="149.7" cy="103.7" r="2.9" fill="#ffffff" />
+  <circle cx="136.6" cy="103.7" r="2.9" fill="#ffffff" />
+  <circle cx="130.0" cy="70.9" r="2.9" fill="#ffffff" />
+  <circle cx="70.9" cy="51.1" r="2.9" fill="#ffffff" />
+  <circle cx="90.6" cy="24.9" r="2.9" fill="#ffffff" />
+  <circle cx="70.9" cy="110.3" r="2.9" fill="#ffffff" />
+  <circle cx="84.0" cy="90.6" r="2.9" fill="#ffffff" />
+  <circle cx="143.1" cy="110.3" r="2.9" fill="#ffffff" />
+  <circle cx="90.6" cy="84.0" r="2.9" fill="#ffffff" />
+  <circle cx="103.7" cy="103.7" r="2.9" fill="#ffffff" />
+  <circle cx="116.9" cy="84.0" r="2.9" fill="#ffffff" />
+  <circle cx="136.6" cy="116.9" r="2.9" fill="#ffffff" />
+  <circle cx="97.1" cy="90.6" r="2.9" fill="#ffffff" />
+  <circle cx="90.6" cy="38.0" r="2.9" fill="#ffffff" />
+  <circle cx="70.9" cy="123.4" r="2.9" fill="#ffffff" />
+  <circle cx="130.0" cy="143.1" r="2.9" fill="#ffffff" />
+  <circle cx="90.6" cy="97.1" r="2.9" fill="#ffffff" />
+  <circle cx="110.3" cy="149.7" r="2.9" fill="#ffffff" />
+  <circle cx="103.7" cy="116.9" r="2.9" fill="#ffffff" />
+  <circle cx="123.4" cy="90.6" r="2.9" fill="#ffffff" />
+  <circle cx="64.3" cy="70.9" r="2.9" fill="#ffffff" />
+</g>
+
+  <!-- LOGO STYLE SIGNATURE COUTURE (Positionné en dessous du QR Code, Y = 415) -->
+  <g transform="translate(275, 415)" text-anchor="middle">
+    <!-- Signature Cursive Fluide & Élégante -->
+    <text class="brand-signature" x="0" y="0">Webely<tspan class="signature-dot">.</tspan></text>
+    
+    <!-- Paraphe / Trait de plume calligraphique sous la signature -->
+    <path d="M -85,18 Q 0,38 90,10" fill="none" stroke="url(#swashGrad)" stroke-width="1.8" stroke-linecap="round" />
+    
+    <!-- Sous-titre Atelier / Studio -->
+    <text class="signature-sub" x="0" y="40">STUDIO DIGITAL</text>
+  </g>
+
+  <!-- ==============================================
+       BARRE VERTICALE AU MILIEU (Style Référence)
+       ============================================== -->
+  <line x1="520" y1="100" x2="520" y2="550" class="divider-line" />
+
+  <!-- ==============================================
+       COLONNE DROITE : IDENTITÉ & LISTE DE CONTACTS
+       Aligne a gauche sur X = 560
+       ============================================== -->
+  <g transform="translate(560, 145)">
+    <text class="name" x="0" y="0">Huw Cerasoli</text>
+    <text class="role" x="0" y="30">FONDATEUR - DÉVELOPPEUR - DIRECTEUR CRÉATIF</text>
+  </g>
+
+  <!-- LISTE DES CONTACTS (Verticale, rythmée et ultra-lisible) -->
+  <g transform="translate(560, 245)">
+    
+    <!-- 1. E-mail -->
+    <g transform="translate(0, 0)">
+      <g transform="translate(0, -18)">
+        <rect x="0" y="0" width="25" height="18" rx="3.5" class="icon-stroke" />
+        <path d="M1.5 3 L12.5 10.5 L23.5 3" class="icon-stroke" />
+      </g>
+      <text class="contact-text" x="40" y="0">huwie@webely.eu</text>
+    </g>
+
+    <!-- 2. Téléphone -->
+    <g transform="translate(0, 54)">
+      <g transform="translate(2, -18)">
+        <rect x="0" y="0" width="18" height="24" rx="4" class="icon-stroke" />
+        <line x1="7" y1="4" x2="11" y2="4" class="icon-stroke" />
+        <circle cx="9" cy="19" r="1.2" fill="#c2c2d1" />
+      </g>
+      <text class="contact-text" x="40" y="0">+32 468 31 48 60</text>
+    </g>
+
+    <!-- 3. Site Web -->
+    <g transform="translate(0, 108)">
+      <g transform="translate(1, -18)">
+        <circle cx="11" cy="11" r="10.5" class="icon-stroke" />
+        <ellipse cx="11" cy="11" rx="5" ry="10.5" class="icon-stroke" stroke-width="1.8" />
+        <line x1="0.5" y1="11" x2="21.5" y2="11" class="icon-stroke" stroke-width="1.8" />
+      </g>
+      <text class="contact-text-bold" x="40" y="0">webely.eu</text>
+    </g>
+
+    <!-- 4. Localisation -->
+    <g transform="translate(0, 162)">
+      <g transform="translate(2, -18)">
+        <path d="M9 1 C4.6 1 1 4.6 1 9 C1 15 9 22.5 9 22.5 C9 22.5 17 15 17 9 C17 4.6 13.4 1 9 1 Z" class="icon-stroke" />
+        <circle cx="9" cy="8.8" r="2.8" class="icon-stroke" stroke-width="1.8" />
+      </g>
+      <text class="contact-text-muted" x="40" y="0">Bruxelles, Belgique</text>
+    </g>
+
+  </g>
+
+  <!-- ==============================================
+       FOOTER COLONNE DROITE : TVA (+10% Agrandie)
+       ============================================== -->
+  <g transform="translate(560, 525)">
+    <text class="vat-footer" x="0" y="0">TVA : <tspan style="fill: #a2a2b8; font-weight: 700;">BE 1041.761.489</tspan></text>
+  </g>
+
+  <!-- Reperes de Repérage Fabricant (Format 90x54mm) -->
+  <path d="M 24,8 L 24,24 L 8,24" class="crop-mark" />
+  <path d="M 1056,8 L 1056,24 L 1072,24" class="crop-mark" />
+  <path d="M 24,640 L 24,624 L 8,624" class="crop-mark" />
+  <path d="M 1056,640 L 1056,624 L 1072,624" class="crop-mark" />
+</svg>
