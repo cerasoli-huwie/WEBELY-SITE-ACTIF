@@ -3320,6 +3320,882 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 
+/* ==========================================================================
+   12. BOSS-LEVEL MOBILE & TABLET OPTIMIZATION (320px -> 1040px)
+   ========================================================================== */
+
+/* Mobile Menu Button & Glassmorphic Drawer (Hidden on Desktop) */
+.mobile-menu-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line-medium);
+  color: var(--text-white);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-menu-btn:hover,
+.mobile-menu-btn.is-open {
+  background: rgba(139, 92, 246, 0.16);
+  border-color: var(--mauve-bright);
+  color: #ffffff;
+}
+
+.mobile-menu-btn .icon-close {
+  display: none;
+}
+
+.mobile-menu-btn.is-open .icon-burger {
+  display: none;
+}
+
+.mobile-menu-btn.is-open .icon-close {
+  display: block;
+}
+
+.mobile-nav-drawer {
+  display: none;
+  background: rgba(6, 6, 12, 0.97);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.28);
+  padding: 16px 20px 22px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.85);
+}
+
+.mobile-nav-drawer.is-open {
+  display: block;
+  animation: mobileDrawerSlide 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes mobileDrawerSlide {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.mobile-nav-link:active,
+.mobile-nav-link:hover {
+  background: rgba(139, 92, 246, 0.14);
+  border-color: rgba(167, 139, 250, 0.35);
+  color: #ffffff;
+}
+
+.mobile-nav-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--mauve-bright);
+  margin-right: 10px;
+}
+
+.mobile-drawer-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-subtle);
+}
+
+/* Global Touch Polish */
+button, a, input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Tablet & Small Laptop (<= 1040px) */
+@media (max-width: 1040px) {
+  .client-funnel-widget {
+    min-height: auto;
+  }
+
+  .journey-Variables-strip {
+    padding: 32px 24px 36px;
+  }
+
+  .journey-flow-stage {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .journey-node,
+  .journey-node.wave-down {
+    transform: none !important;
+  }
+
+  .journey-arrow-connector {
+    width: 44px !important;
+    height: 36px !important;
+    margin: 0 auto !important;
+    transform: none !important;
+  }
+
+  .journey-arrow-svg {
+    width: 44px;
+    height: 36px;
+    transform: rotate(90deg) scale(0.7);
+  }
+}
+
+/* Mobile & Phablet (<= 860px) */
+@media (max-width: 860px) {
+  .main-nav,
+  .header-Exclusive-badge {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+
+  .header-inner {
+    height: 64px;
+    gap: 12px;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .header-actions .btn-primary {
+    padding: 9px 14px;
+    font-size: 12.5px;
+  }
+}
+
+/* Core Mobile Optimization (<= 720px) */
+@media (max-width: 720px) {
+  .container {
+    padding: 0 18px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  /* 1. Hero Mobile */
+  .hero-section {
+    min-height: auto;
+    padding: 42px 0 54px;
+  }
+
+  .hero-title {
+    font-size: clamp(28px, 7.8vw, 36px);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    margin-bottom: 16px;
+  }
+
+  .hero-lead {
+    font-size: 15px;
+    line-height: 1.58;
+    margin-bottom: 26px;
+  }
+
+  .hero-cta-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .hero-cta-row .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    padding: 15px 18px;
+    font-size: 14px;
+    line-height: 1.3;
+    min-height: 50px;
+  }
+
+  .hero-guarantees {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .hero-guarantee-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+
+  /* 2. Section Headings Mobile */
+  .section-head-split {
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: clamp(24px, 6.8vw, 31px);
+    line-height: 1.15;
+  }
+
+  .section-subtitle {
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
+
+  .eyebrow-tag {
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+
+  /* 3. 4-Pillar Matrix Mobile */
+  .architectural-matrix {
+    border-radius: 20px;
+    margin-bottom: 36px;
+  }
+
+  .matrix-cell {
+    padding: 24px 18px;
+  }
+
+  .matrix-cell:last-child {
+    border-bottom: none !important;
+  }
+
+  .matrix-watermark {
+    font-size: 54px;
+    top: 14px;
+    right: 16px;
+  }
+
+  .matrix-cell-top {
+    margin-bottom: 16px;
+    gap: 11px;
+  }
+
+  .matrix-icon-frame {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .matrix-title {
+    font-size: 19.5px;
+    margin-bottom: 8px;
+  }
+
+  .matrix-desc {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+
+  .matrix-specs-row {
+    padding-top: 14px;
+    gap: 6px;
+  }
+
+  .spec-pill {
+    font-size: 11.5px;
+    padding: 5px 10px;
+  }
+
+  /* 4. 5-Step Journey Strip Mobile */
+  .journey-Variables-strip {
+    padding: 22px 16px 24px;
+    border-radius: 20px;
+  }
+
+  .journey-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .journey-title {
+    font-size: 18px;
+    line-height: 1.28;
+  }
+
+  .journey-header .btn {
+    width: 100%;
+    white-space: normal;
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .journey-node {
+    padding: 16px;
+    border-radius: 15px;
+  }
+
+  .journey-node-top {
+    margin-bottom: 8px;
+  }
+
+  /* 5. Trade Selector Dock (2x2 Compact Grid on Mobile!) */
+  .sector-dock-wrapper {
+    padding: 16px 14px 16px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+  }
+
+  .sector-dock-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .sector-dock-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 13.5px;
+    line-height: 1.35;
+  }
+
+  .sector-dock-hint {
+    display: none;
+  }
+
+  .sector-cards-dock {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px;
+  }
+
+  .sector-btn {
+    padding: 11px 10px;
+    gap: 9px;
+    border-radius: 13px;
+  }
+
+  .sector-card-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+  }
+
+  .sector-card-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .sector-card-name {
+    font-size: 12px;
+    white-space: normal;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .sector-card-sub {
+    font-size: 10px;
+  }
+
+  /* 6. Contractor 3-Step Simulator Mobile */
+  .live-workbench {
+    gap: 20px;
+  }
+
+  .client-funnel-widget {
+    border-radius: 20px;
+    min-height: auto;
+  }
+
+  .contractor-corner-tab {
+    border-width: 32px 32px 0 0;
+  }
+
+  .contractor-form-header {
+    padding: 24px 18px 16px;
+  }
+
+  .contractor-form-title {
+    font-size: 19.5px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .contractor-form-sub {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .contractor-stepper-row {
+    gap: 8px;
+  }
+
+  .contractor-step-num {
+    font-size: 15px;
+  }
+
+  .contractor-step-lbl {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+
+  .contractor-form-body {
+    padding: 18px 18px 22px;
+  }
+
+  .contractor-pills-wrap {
+    gap: 8px;
+  }
+
+  .contractor-pill {
+    padding: 10px 14px;
+    font-size: 13px;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  /* 16px prevents iOS Safari automatic zoom on input focus */
+  .contractor-input-field,
+  .input-field {
+    font-size: 16px !important;
+    padding: 13px 15px;
+  }
+
+  .contractor-nav-row {
+    margin-top: 18px;
+    padding-top: 14px;
+    gap: 10px;
+  }
+
+  .contractor-btn-next {
+    padding: 13px 20px;
+    font-size: 13px;
+  }
+
+  /* Step 4 Confirmation Card Mobile */
+  .contractor-finish-box {
+    padding: 10px 0 4px;
+  }
+
+  .contractor-finish-title {
+    font-size: 19px;
+  }
+
+  .contractor-finish-sub {
+    font-size: 13px;
+  }
+
+  .contractor-finish-summary {
+    padding: 0;
+    background: transparent;
+    border: none;
+  }
+
+  .conf-card {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .conf-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .conf-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .conf-guarantees-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  /* 7. Phone SMS & Notion CRM Mobile */
+  .iphone-sms-banner {
+    padding: 14px;
+    border-radius: 18px;
+    gap: 11px;
+  }
+
+  .ios-messages-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+  }
+
+  .ios-sms-top {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .ios-sms-appname {
+    font-size: 10.5px;
+  }
+
+  .ios-sms-sender {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .ios-sms-body {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .notion-topbar {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+
+  .notion-body {
+    padding: 16px 14px 18px;
+  }
+
+  .notion-title-row {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .notion-page-title {
+    font-size: 18px;
+  }
+
+  .notion-prop-row {
+    grid-template-columns: 106px 1fr;
+    align-items: flex-start;
+    padding: 6px 4px;
+    gap: 6px;
+  }
+
+  .notion-prop-key {
+    font-size: 12px;
+    padding-top: 2px;
+  }
+
+  .notion-status-switcher {
+    gap: 4px;
+  }
+
+  .notion-status-btn {
+    font-size: 11px;
+    padding: 3px 7px;
+  }
+
+  .notion-callout {
+    padding: 10px 12px;
+    font-size: 12px;
+    align-items: flex-start;
+  }
+
+  /* 8. Section 4 : Offer & Deliverables Mobile */
+  .offer-investment-card {
+    padding: 24px 18px;
+    border-radius: 22px;
+  }
+
+  .offer-card-title {
+    font-size: 23px;
+  }
+
+  .offer-card-sub {
+    font-size: 13.5px;
+    margin-bottom: 20px;
+  }
+
+  .price-block-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .price-block-figure {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    text-align: left;
+  }
+
+  .price-figure-main {
+    font-size: 28px;
+  }
+
+  .offer-investment-card .btn-lg {
+    width: 100%;
+    white-space: normal;
+    padding: 15px 16px;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .deliverable-module {
+    padding: 22px 18px;
+    border-radius: 20px;
+  }
+
+  .module-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+  }
+
+  .module-title {
+    font-size: 17px;
+  }
+
+  /* 9. Section 5 : ROI Calculator & Comparison Mobile */
+  .calculator-wrapper {
+    padding: 20px 16px;
+    border-radius: 22px;
+    gap: 22px;
+    margin-bottom: 44px;
+  }
+
+  .calc-controls {
+    gap: 14px;
+  }
+
+  .calc-control-group {
+    padding: 14px 15px;
+  }
+
+  .calc-label-row {
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .calc-val-display {
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: 13.5px;
+    padding: 3px 9px;
+  }
+
+  input[type="range"] {
+    height: 8px;
+    margin: 4px 0;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    width: 24px;
+    height: 24px;
+  }
+
+  .calc-result-box {
+    padding: 24px 16px;
+    border-radius: 18px;
+  }
+
+  .calc-result-main {
+    font-size: 36px;
+  }
+
+  .calc-row {
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 12.5px;
+  }
+
+  .calc-row strong {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .calc-result-box .btn-lg {
+    width: 100%;
+    white-space: normal;
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  .comparison-cards-grid {
+    gap: 16px;
+  }
+
+  .comparison-card {
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+
+  /* 10. Roadmap, FAQ, Final CTA & Footer Mobile */
+  .roadmap-grid {
+    gap: 14px;
+    margin-bottom: 52px;
+  }
+
+  .roadmap-card {
+    padding: 22px 18px;
+  }
+
+  .faq-question {
+    padding: 16px 18px;
+    font-size: 14px;
+    line-height: 1.4;
+    gap: 12px;
+  }
+
+  .faq-answer {
+    padding: 0 18px;
+    font-size: 13.5px;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 560px;
+    padding-bottom: 18px;
+  }
+
+  .final-cta-card {
+    padding: 32px 18px;
+    margin-top: 48px;
+    border-radius: 22px;
+  }
+
+  .final-cta-title {
+    font-size: clamp(22px, 6.4vw, 30px);
+    line-height: 1.18;
+  }
+
+  .final-cta-desc {
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+
+  .final-cta-card .btn-lg {
+    width: 100%;
+    white-space: normal;
+    padding: 15px 18px;
+    font-size: 14px;
+  }
+
+  .site-footer {
+    padding: 48px 0 110px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 26px 16px;
+    margin-bottom: 32px;
+  }
+
+  .footer-brand,
+  .footer-col:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  /* 11. Sticky Floating Bar Mobile */
+  .floating-cta-bar {
+    bottom: max(10px, env(safe-area-inset-bottom, 10px));
+    width: calc(100% - 20px);
+  }
+
+  .floating-cta-inner {
+    padding: 9px 10px 9px 14px;
+    border-radius: 16px;
+    gap: 10px;
+  }
+
+  .floating-cta-info {
+    gap: 8px;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .hide-mobile-inline {
+    display: none;
+  }
+
+  .floating-cta-inner .btn-primary {
+    padding: 9px 14px !important;
+    font-size: 12px !important;
+    white-space: nowrap;
+  }
+
+  /* 12. Modal Mobile */
+  .modal-overlay {
+    padding: 14px;
+  }
+
+  .modal-box {
+    padding: 26px 18px 22px;
+    border-radius: 22px;
+    max-height: 90dvh;
+    overflow-y: auto;
+  }
+}
+
+/* Extra-Compact Phones (<= 390px : iPhone SE / Mini / 360px Android) */
+@media (max-width: 390px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .webely-logo {
+    font-size: 23px;
+  }
+
+  .hide-xs {
+    display: none;
+  }
+
+  .header-actions .btn-primary {
+    padding: 8px 12px;
+    font-size: 11.5px;
+  }
+
+  .contractor-form-header,
+  .contractor-form-body {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .contractor-pill {
+    padding: 9px 12px;
+    font-size: 12.5px;
+  }
+
+  .notion-prop-row {
+    grid-template-columns: 96px 1fr;
+  }
+}
+
+
     </style>
 </head>
 <body>
@@ -3350,8 +4226,43 @@ input[type="range"]::-webkit-slider-thumb {
 
       <div class="header-actions">
         <a href="#" class="btn btn-primary trigger-audit-modal">
-          <span>Appel Découverte (10 min)</span>
+          <span>Appel <span class="hide-xs">Découverte </span>(10 min)</span>
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu de navigation" aria-expanded="false">
+          <svg class="icon-burger" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="15" y2="17"/></svg>
+          <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <div class="mobile-nav-links">
+        <a href="#systeme" class="mobile-nav-link">
+          <span><span class="mobile-nav-num">01</span>Architecture &amp; 4 Piliers</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#demonstration" class="mobile-nav-link">
+          <span><span class="mobile-nav-num">02</span>Simulateur Live &amp; CRM</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#tarifs" class="mobile-nav-link">
+          <span><span class="mobile-nav-num">03</span>Offre Clé en Main &amp; Tarif</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#calculateur" class="mobile-nav-link">
+          <span><span class="mobile-nav-num">04</span>Calculateur de Rentabilité</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#faq" class="mobile-nav-link">
+          <span><span class="mobile-nav-num">05</span>Questions Fréquentes</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="mobile-drawer-footer">
+        <a href="#" class="btn btn-primary trigger-audit-modal" style="width: 100%; padding: 13px 18px;">
+          <span>Réserver un appel de 10 min (Sans engagement)</span>
         </a>
       </div>
     </div>
@@ -4537,7 +5448,7 @@ input[type="range"]::-webkit-slider-thumb {
     <div class="floating-cta-inner">
       <div class="floating-cta-info">
         <span class="live-dot"></span>
-        <span><strong>Appel rapide 10 min :</strong> Découvrez comment ce système s'adapte à votre entreprise (Sans engagement)</span>
+        <span><strong>Appel Découverte (10 min)</strong><span class="hide-mobile-inline"> : Découvrez comment ce système s'adapte à votre entreprise</span> • Sans engagement</span>
       </div>
       <div class="header-actions">
         <a href="#" class="btn btn-primary trigger-audit-modal" style="padding: 9px 18px; font-size: 12.5px;">
