@@ -174,13 +174,13 @@ img {
   height: auto;
   display: block;
   will-change: transform;
-  animation: wbSiteScroll 14s ease-in-out infinite;
+  animation: wbSiteScroll 12s ease-in-out infinite;
 }
 
 @keyframes wbSiteScroll {
-  0%, 10% { transform: translateY(0); }
-  45%, 60% { transform: translateY(-62%); }
-  90%, 100% { transform: translateY(0); }
+  0% { transform: translateY(0); }
+  42%, 54% { transform: translateY(-62%); }
+  94%, 100% { transform: translateY(0); }
 }
 
 /* Ya Tu Sabes internal miniature sections */
