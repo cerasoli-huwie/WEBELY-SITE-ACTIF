@@ -138,7 +138,7 @@ img {
   text-align: left;
 }
 
-/* --- Left: Minimalist Smartphone Frame + Soft Purple Halo (Options 1 & 2) --- */
+/* --- Left: Minimalist Smartphone Frame --- */
 .wb-site-widget {
   position: relative;
   display: block;
@@ -148,29 +148,17 @@ img {
   border-radius: 34px;
   background: linear-gradient(145deg, #1b1f38 0%, #0f1120 100%);
   box-shadow:
-    0 24px 52px rgba(19, 22, 40, 0.22),
-    0 0 46px rgba(111, 0, 255, 0.16),
+    0 24px 52px rgba(19, 22, 40, 0.2),
     inset 0 0 0 1px rgba(255, 255, 255, 0.14);
   text-decoration: none;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-}
-
-.wb-site-widget::before {
-  content: "";
-  position: absolute;
-  inset: -18px;
-  z-index: -1;
-  border-radius: 46px;
-  background: radial-gradient(circle at 50% 50%, rgba(111, 0, 255, 0.18) 0%, rgba(111, 0, 255, 0) 70%);
-  pointer-events: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .wb-site-widget:hover {
     transform: translateY(-4px);
     box-shadow:
-      0 30px 64px rgba(19, 22, 40, 0.26),
-      0 0 56px rgba(111, 0, 255, 0.24),
+      0 30px 64px rgba(19, 22, 40, 0.24),
       inset 0 0 0 1px rgba(255, 255, 255, 0.2);
   }
   .wb-site-widget:hover .wb-site-scroll-img {
