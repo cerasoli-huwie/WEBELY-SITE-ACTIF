@@ -130,36 +130,48 @@ img {
    ========================================================================== */
 .wb-hero-showcase {
   display: grid;
-  grid-template-columns: 330px 1fr;
-  gap: 24px;
+  grid-template-columns: 280px 1fr;
+  gap: 28px;
   max-width: 960px;
   margin: 28px auto 0;
   align-items: center;
   text-align: left;
 }
 
-/* --- Left: Scrolling Website Widget (ya-tu-sabes.com) --- */
+/* --- Left: Minimalist Smartphone Frame + Soft Purple Halo (Options 1 & 2) --- */
 .wb-site-widget {
   position: relative;
   display: block;
   width: 100%;
-  height: 410px;
-  border-radius: 18px;
-  background: #0d1913;
-  border: 1px solid rgba(19, 22, 40, 0.08);
-  box-shadow: 0 26px 56px rgba(19, 22, 40, 0.2), 0 6px 18px rgba(19, 22, 40, 0.08);
-  overflow: hidden;
-  isolation: isolate;
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  height: 430px;
+  padding: 7px;
+  border-radius: 34px;
+  background: linear-gradient(145deg, #1b1f38 0%, #0f1120 100%);
+  box-shadow:
+    0 24px 52px rgba(19, 22, 40, 0.22),
+    0 0 46px rgba(111, 0, 255, 0.16),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.14);
   text-decoration: none;
-  transform: perspective(1200px) rotateY(4deg);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.wb-site-widget::before {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  z-index: -1;
+  border-radius: 46px;
+  background: radial-gradient(circle at 50% 50%, rgba(111, 0, 255, 0.18) 0%, rgba(111, 0, 255, 0) 70%);
+  pointer-events: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .wb-site-widget:hover {
-    transform: perspective(1200px) rotateY(0deg) translateY(-4px);
-    box-shadow: 0 32px 68px rgba(19, 22, 40, 0.24), 0 8px 22px rgba(19, 22, 40, 0.1);
+    transform: translateY(-4px);
+    box-shadow:
+      0 30px 64px rgba(19, 22, 40, 0.26),
+      0 0 56px rgba(111, 0, 255, 0.24),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.2);
   }
   .wb-site-widget:hover .wb-site-scroll-img {
     animation-play-state: paused;
@@ -170,8 +182,37 @@ img {
   position: relative;
   width: 100%;
   height: 100%;
+  border-radius: 27px;
   overflow: hidden;
+  isolation: isolate;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   background: #0d1913;
+}
+
+.wb-site-viewport::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 36px;
+  z-index: 3;
+  background: linear-gradient(to top, rgba(11, 22, 17, 0.72), transparent);
+  pointer-events: none;
+}
+
+.wb-phone-island {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 66px;
+  height: 17px;
+  border-radius: 999px;
+  background: #0b0d17;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  z-index: 4;
+  pointer-events: none;
 }
 
 .wb-site-scroll-img {
@@ -960,11 +1001,20 @@ img {
     margin-top: 22px;
   }
   .wb-site-widget {
-    max-width: 310px;
+    max-width: 264px;
     width: 100%;
-    height: 380px;
+    height: 400px;
     margin: 0 auto;
-    transform: none;
+    padding: 6px;
+    border-radius: 30px;
+  }
+  .wb-site-viewport {
+    border-radius: 24px;
+  }
+  .wb-phone-island {
+    width: 58px;
+    height: 15px;
+    top: 8px;
   }
   .wb-ads-stage {
     height: auto;
