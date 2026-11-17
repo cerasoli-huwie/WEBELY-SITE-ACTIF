@@ -442,12 +442,12 @@ img {
 
 /* Top row: Left to Right */
 .wb-marquee-track.is-ltr {
-  animation: wbMarqueeLTR 26s linear infinite;
+  animation: wbMarqueeLTR 34s linear infinite;
 }
 
 /* Bottom row: Right to Left */
 .wb-marquee-track.is-rtl {
-  animation: wbMarqueeRTL 26s linear infinite;
+  animation: wbMarqueeRTL 34s linear infinite;
 }
 
 .wb-ads-stage:hover .wb-marquee-track {
@@ -465,64 +465,30 @@ img {
 }
 
 .wb-ad-card {
-  width: 176px;
-  height: 176px;
-  border-radius: 12px;
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 184px;
+  height: 184px;
+  border-radius: 14px;
+  padding: 0;
   flex-shrink: 0;
-  box-shadow: 0 8px 20px rgba(19, 22, 40, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 8px 22px rgba(19, 22, 40, 0.09);
+  border: 1px solid rgba(19, 22, 40, 0.08);
   overflow: hidden;
+  background: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.wb-ad-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 28px rgba(19, 22, 40, 0.14);
 }
 
 .wb-ad-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  object-position: center;
+  display: block;
 }
-
-.wb-ad-tag {
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  padding: 3px 7px;
-  border-radius: 999px;
-  width: fit-content;
-  background: rgba(255, 255, 255, 0.16);
-  color: #fff;
-}
-
-.wb-ad-headline {
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.25;
-  color: #fff;
-}
-
-.wb-ad-cta {
-  font-size: 9.5px;
-  font-weight: 700;
-  background: #fff;
-  color: #131628;
-  padding: 4px 8px;
-  border-radius: 6px;
-  width: fit-content;
-}
-
-/* Distinct ad palette cards */
-.ad-style-1 { background: linear-gradient(135deg, #131628 0%, #2a2159 100%); }
-.ad-style-2 { background: linear-gradient(135deg, #0d1f18 0%, #1d4432 100%); }
-.ad-style-3 { background: linear-gradient(135deg, #6f00ff 0%, #42009e 100%); }
-.ad-style-4 { background: #ffffff; border: 1px solid #dfe1ec; }
-.ad-style-4 .wb-ad-tag { background: #efe6ff; color: #6f00ff; }
-.ad-style-4 .wb-ad-headline { color: #131628; }
-.ad-style-4 .wb-ad-cta { background: #6f00ff; color: #fff; }
-.ad-style-5 { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
-.ad-style-6 { background: linear-gradient(135deg, #0b4f6c 0%, #145374 100%); }
 
 /* ==========================================================================
    FORM / WAITLIST CARD (#waitlist, .sr-card, .rm-card-h2, .sr-namerow, .sr-input, .sr-btn)
@@ -987,12 +953,9 @@ img {
     gap: 12px;
   }
   .wb-ad-card {
-    width: 136px;
-    height: 136px;
-    padding: 10px;
-  }
-  .wb-ad-headline {
-    font-size: 10.5px;
+    width: 142px;
+    height: 142px;
+    padding: 0;
   }
   .stw-grid {
     grid-template-columns: 1fr;
