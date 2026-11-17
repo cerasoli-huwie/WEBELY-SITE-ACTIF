@@ -98,4 +98,36 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal();
     }
   });
+
+  // 3. Hormozi-style Intersection Observer entry animation for sketches
+  (function() {
+    var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var images = document.querySelectorAll('.stw-dd');
+    
+    function reveal(img) {
+      if (img.dataset.src) {
+        img.src = img.dataset.src;
+      }
+      img.classList.add('is-loaded');
+    }
+
+    if (!('IntersectionObserver' in window) || reduced) {
+      images.forEach(reveal);
+      return;
+    }
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          reveal(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    images.forEach(function(img) {
+      observer.observe(img);
+    });
+  })();
+
 });
