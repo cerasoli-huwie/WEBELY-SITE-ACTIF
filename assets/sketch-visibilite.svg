@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 480" width="100%" height="100%" fill="none" stroke="#131628" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Title handwritten sketch style -->
+  <text x="250" y="58" text-anchor="middle" font-family="'Caveat', 'Comic Sans MS', cursive, 'Poppins', sans-serif" font-weight="700" font-size="38" fill="#131628" stroke="none" letter-spacing="2">VISIBILITÉ</text>
+  <path d="M 180 72 Q 250 76 320 71" stroke="#131628" stroke-width="3.5" />
+
+  <!-- Stick figures / Audience above funnel -->
+  <!-- Person 1 -->
+  <circle cx="155" cy="118" r="10" stroke-width="3.5" />
+  <path d="M 155 128 L 155 152" stroke-width="3.5" />
+  <path d="M 143 138 L 167 138" stroke-width="3.2" />
+
+  <!-- Person 2 -->
+  <circle cx="215" cy="112" r="10" stroke-width="3.5" />
+  <path d="M 215 122 L 215 148" stroke-width="3.5" />
+  <path d="M 203 132 L 227 132" stroke-width="3.2" />
+
+  <!-- Person 3 (Center) -->
+  <circle cx="250" cy="106" r="11" stroke-width="3.5" />
+  <path d="M 250 117 L 250 145" stroke-width="3.5" />
+  <path d="M 237 128 L 263 128" stroke-width="3.2" />
+
+  <!-- Person 4 -->
+  <circle cx="285" cy="112" r="10" stroke-width="3.5" />
+  <path d="M 285 122 L 285 148" stroke-width="3.5" />
+  <path d="M 273 132 L 297 132" stroke-width="3.2" />
+
+  <!-- Person 5 -->
+  <circle cx="345" cy="118" r="10" stroke-width="3.5" />
+  <path d="M 345 128 L 345 152" stroke-width="3.5" />
+  <path d="M 333 138 L 357 138" stroke-width="3.2" />
+
+  <!-- Funnel -->
+  <path d="M 105 168 Q 250 172 395 168 L 290 325 L 290 380 L 210 380 L 210 325 Z" stroke-width="4.5" />
+
+  <!-- Downward Arrow inside funnel -->
+  <path d="M 250 190 L 250 295" stroke="#6f00ff" stroke-width="5" />
+  <polygon points="238,290 250,314 262,290" fill="#6f00ff" stroke="#6f00ff" stroke-width="2" />
+
+  <!-- Qualified Result with Green Check Circle at bottom -->
+  <circle cx="250" cy="418" r="22" stroke="#10b981" stroke-width="4" fill="#ecfdf5" />
+  <polyline points="239,418 247,426 261,411" stroke="#10b981" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

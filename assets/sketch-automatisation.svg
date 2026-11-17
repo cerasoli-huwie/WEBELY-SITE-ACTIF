@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 480" width="100%" height="100%" fill="none" stroke="#131628" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Title handwritten sketch style -->
+  <text x="250" y="58" text-anchor="middle" font-family="'Caveat', 'Comic Sans MS', cursive, 'Poppins', sans-serif" font-weight="700" font-size="34" fill="#131628" stroke="none" letter-spacing="1.5">AUTOMATISATION</text>
+  <path d="M 120 72 Q 250 76 380 71" stroke="#131628" stroke-width="3.5" />
+
+  <!-- Smiling manager figure with clipboard -->
+  <circle cx="105" cy="180" r="26" stroke-width="3.8" />
+  <!-- Smile & eyes -->
+  <path d="M 94 186 Q 105 198 116 186" stroke-width="3" />
+  <circle cx="97" cy="174" r="2.5" fill="#131628" />
+  <circle cx="113" cy="174" r="2.5" fill="#131628" />
+  <!-- Body -->
+  <path d="M 105 206 L 105 310" stroke-width="4.2" />
+  <!-- Legs -->
+  <path d="M 105 310 L 75 395" stroke-width="4.2" />
+  <path d="M 105 310 L 135 395" stroke-width="4.2" />
+  <!-- Left arm holding clipboard -->
+  <path d="M 105 230 L 138 255" stroke-width="3.8" />
+  <!-- Clipboard -->
+  <rect x="135" y="235" width="45" height="60" stroke-width="3.5" rx="5" fill="#ffffff" />
+  <line x1="145" y1="250" x2="168" y2="250" stroke-width="3" />
+  <line x1="145" y1="265" x2="168" y2="265" stroke-width="3" />
+  <line x1="145" y1="280" x2="160" y2="280" stroke-width="3" />
+  <path d="M 105 230 L 72 270 L 80 295" stroke-width="3.8" />
+
+  <!-- Rising chart with green arrow -->
+  <!-- Axis -->
+  <path d="M 230 360 L 450 360" stroke-width="4.2" />
+  <path d="M 230 360 L 230 140" stroke-width="4.2" />
+
+  <!-- Curve line -->
+  <path d="M 235 330 Q 310 310 360 230 T 435 150" stroke="#10b981" stroke-width="5.5" />
+  <polygon points="425,142 445,146 437,166" fill="#10b981" stroke="#10b981" stroke-width="2" />
+
+  <!-- Pill tags at bottom of chart: 24h/24 • 7j/7 • INSTANTANÉ -->
+  <rect x="232" y="380" width="62" height="28" rx="6" stroke="#cbd5e1" stroke-width="2" fill="#f8fafc" />
+  <text x="263" y="399" text-anchor="middle" font-family="'Poppins', sans-serif" font-size="11" font-weight="700" fill="#64748b" stroke="none">24H/24</text>
+
+  <rect x="304" y="380" width="55" height="28" rx="6" stroke="#cbd5e1" stroke-width="2" fill="#f8fafc" />
+  <text x="331" y="399" text-anchor="middle" font-family="'Poppins', sans-serif" font-size="11" font-weight="700" fill="#64748b" stroke="none">7J/7</text>
+
+  <rect x="369" y="380" width="82" height="28" rx="6" stroke="#6f00ff" stroke-width="2.2" fill="rgba(111, 0, 255, 0.08)" />
+  <text x="410" y="399" text-anchor="middle" font-family="'Poppins', sans-serif" font-size="10.5" font-weight="800" fill="#6f00ff" stroke="none">INSTANTANÉ</text>
+</svg>
