@@ -174,12 +174,12 @@ img {
   height: auto;
   display: block;
   will-change: transform;
-  animation: wbSiteScroll 12s ease-in-out infinite;
+  animation: wbSiteScroll 15s ease-in-out infinite;
 }
 
 @keyframes wbSiteScroll {
   0% { transform: translateY(0); }
-  42%, 54% { transform: translateY(-62%); }
+  42%, 54% { transform: translateY(-74%); }
   94%, 100% { transform: translateY(0); }
 }
 
