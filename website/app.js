@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const playTrigger = document.getElementById('play-video-trigger');
   const closeBtn = document.getElementById('close-video-modal');
 
-  // 1. Form Validation & Submission
+  // 1. Form Validation & Submission (sends to /api/lead -> Telegram)
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const inputs = form.querySelectorAll('.sr-input');
@@ -43,13 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('webely_discovery_lead', JSON.stringify(data));
       } catch (_) {}
 
-      setTimeout(() => {
-        form.style.display = 'none';
-        if (success) {
-          success.style.display = 'block';
-          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }, 500);
+      try {
+        await fetch('/api/lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+      } catch (_) {
+        // Static localhost fallback: still confirm to user if /api/lead isn't running locally
+      }
+
+      form.style.display = 'none';
+      if (success) {
+        success.style.display = 'block';
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
     });
 
     // Remove red error outline on typing
